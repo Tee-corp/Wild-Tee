@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -8,74 +8,84 @@ html {
   font-family: sans-serif;
 }
 
-#fixed-nav {
-  /* border: solid tomato; */
+#FV {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
   width: 100%;
-  height: 50px;
+  height: 70px;
   position: sticky;
   top: 0%;
   z-index: 1;
-  background-color: #548ca8;
+  background-color: #EDEDED;
   box-shadow: 0px 2px 5px #00000071;
 }
 
-#logo {
-  width: 40px;
-  height: 40px;
-  margin-left: 1rem;
-  display: inline;
-  filter: invert(1);
+#fixed-nav {
+  /* border: solid tomato; */
+  width: 80%;
+  height: 70px;
+  margin: 0 auto;
 }
 
 #fixed-nav span {
   display: inline-block;
   font-family: "Quicksand", sans-serif;
-  color: white;
-  font-size: 2pc;
-  font-weight: lighter;
+  color: #046582;
+  font-size: 3pc;
+  font-weight: bold;
   /* border: solid tomato; */
-  margin-left: 1rem;
+  
   margin-top: 0.5rem;
 }
 
-#fixed-nav a {
-  text-decoration: none;
-  float: right;
-  /* padding-right:  2rem;  */
-  margin-right: 2rem;
+#icon-bar {
+  margin-right: 0rem;
   margin-top: 1rem;
-  color: white;
+  float: right;
+  /* border: solid tomato; */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+#icon-bar a {
+  text-decoration: none;
+  margin-right: 2rem;
+  font-size: 1.5pc;
+  /* border: solid tomato; */
+  color: #046582;
   transition: 0.2s;
 }
 
-#fixed-nav a:hover {
-  transform: scale(150%);
+#icon-bar a:hover {
+  opacity: 0.6;
 }
 
 #side-pocket {
   /* border: solid tomato; */
-  position: fixed;
+  display: inline-block;
   z-index: 1;
-  width: 3rem;
-  height: 9rem;
-  margin-top: 2rem;
-  margin-left: 0.5rem;
+  width: 29rem;
+  height: 3rem;
+
+  margin-left: 15rem;
   border-radius: 7px;
   background-color: #334257;
-  box-shadow: 0px 2px 7px #00000077;
+  /* box-shadow: 0px 2px 7px #00000077; */
+  text-align: center;
 }
 
 #side-nav {
-  display: flex;
-  flex-direction: column;
-  margin-left: 0.2rem;
+  /* display: flex;
+  flex-direction: row; */
 }
 
 #side-nav a {
   text-decoration: none;
   /* border: solid tomato; */
-  margin-top: 1rem;
-  margin-left: 0.5rem;
+  /* margin-top: 1rem; */
+  margin-left: 1rem;
+  font-size: 1.1pc;
   color: white;
   transition: 0.3s;
   /* padding-right: 0.5rem;
@@ -88,13 +98,19 @@ html {
   transform: scale(130%);
 }
 
+#divider {
+  width: 70%;
+  margin-top: 2rem;
+  border-width: 1px;
+}
+
 header {
   /* border: solid tomato; */
-  /* margin: 0 auto; */
-  width: 100%;
-  height: 550px;
-  background-image: url(/boy.jpg);
-  background-size:cover;
+  margin: 2rem auto;
+  width: 80%;
+  height: 615px;
+  background-image: url(/images/boy.jpg);
+  background-size: cover;
   text-align: center;
   /* background-size: contain; */
   /* background-position: 0rem 46rem; */
@@ -107,12 +123,11 @@ header {
 
 #raper {
   display: flex;
- flex: auto;
+  flex: auto;
   margin-top: 7rem;
   /* border: solid tomato; */
   height: 18rem;
   margin-left: 5rem;
-
 }
 
 #one {
@@ -132,7 +147,7 @@ header {
   font-size: 7pc;
   margin-top: 9rem;
   opacity: 0.9;
-  color: rgb(199, 50, 45);
+  color: #046582;
   user-select: none;
 }
 
@@ -140,7 +155,7 @@ header {
   width: 300px;
   height: 300px;
   opacity: 0.9;
- 
+
   /* filter: invert(1); */
 }
 
@@ -150,7 +165,13 @@ main {
   margin: 5rem auto;
 }
 
-#intro {
+h3 {
+  font-size: 2pc;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#tpoics {
   width: 100%;
   height: 400px;
   /* border: solid tomato; */
@@ -160,39 +181,153 @@ main {
   padding: 1rem;
 }
 
-#intro img {
+.card-topic {
+  width: 370px;
+  height: 300px;
   /* border: solid tomato; */
-}
-
-#intro h3 {
-  /* border: solid tomato; */
-  width: 300px;
-  height: 375;
   text-align: center;
   margin-top: 5rem;
-  font-size: 1.5pc;
 }
 
-#ob {
-  /* border: solid tomato;  */
-  border-radius: 5px;
-  width: 65%;
-  margin: 5rem auto;
-  box-shadow: 0px 3px 5px hsla(0, 0%, 0%, 0.233);
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between;
+.card-topic span {
+font-size: 2.5pc;
+font-weight: bold;
+font-family: 'Montserrat', sans-serif;
+
 }
 
-.item {
-  /* border: solid tomato;  */
-  left: 2rem;
-  transition: 0.3s;
+
+
+h4{
+text-align: center;
+font-size: 1.5pc;
+margin-top: 2rem;
+font-weight: bold;
+font-family: 'Montserrat', sans-serif;
+
 }
 
-.item:hover {
-  transform: scale(200%);
+#all-models {
+/* border: solid tomato;  */
+width: 100%;
+height: 800px;
+display: flex;
+justify-content: space-evenly;
+margin-top: 2rem;
 }
+
+.model1 {
+background-image: url(/images/model3.webp);
+background-size: cover;
+width: 40%;
+transition: 0.5s;
+}
+
+.model1:hover {
+
+  background-image: url(/images/model3back.webp);
+}
+
+.model1:active {
+
+  background-image: url(/images/model3shirt.webp);
+}
+
+
+.model2 {
+  background-image: url(/images/model2front.webp);
+  background-size: cover;
+  width: 40%;
+  transition: 0.5s;
+  }
+
+
+  .model2:hover {
+
+    background-image: url(/images/model2back.webp);
+  }
+
+  .model2:active {
+
+    background-image: url(/images/model2shirt.webp);
+  }
+
+
+
+
+  #declare {
+    width: 100%;
+    height: 400px;
+    border: solid tomato;
+    display: flex;
+    justify-content: space-between;
+  margin-top: 2rem;
+    padding: 1rem;
+  }
+  
+  .one-del {
+    width: 390px;
+    height: 300px;
+    border: solid tomato;
+  }
+
+
+
+
+
+
+  #ob {
+    /* border: solid tomato;  */
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    margin: 2rem auto;
+    box-shadow: 0px 3px 5px hsla(0, 0%, 0%, 0.233);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  #btn {
+    font-weight: bolder;
+    font-size: 1.3pc;
+    color: white;
+    background-color: #548ca8;
+    border-style: none;
+    border: 5px;
+    transition: 0.2s;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding: 0.3rem;
+  }
+  
+  #btn:hover {
+    transform: scale(110%);
+  }
+  
+  #btn:active {
+    transform: scale(100%);
+  }
+  
+  .item {
+    /* border: solid tomato;  */
+  
+    transition: 0.3s;
+  }
+  
+  .item:hover {
+    transform: scale(130%);
+  }
+  
+  .item:active {
+    transform: scale(100%);
+  }
+
+
+
+
 
 #team-info {
   width: 100%;
@@ -228,7 +363,7 @@ main {
 footer {
   width: 100%;
   height: 150px;
-  background-color: #548ca8;
+  background-color: #EDEDED;
   background-size: cover;
   text-align: center;
   position: relative;
@@ -246,35 +381,3 @@ footer {
 }
 
 
-
-
-
-
-
-#closet {
-  /* border: solid tomato;  */
-  height: 1000px;
-  position: relative;
-}
-
-#shirrt {
-  /* border: solid tomato; */
-  width: 400px;
-  height: 450px;
-  margin-top: 7rem;
-  margin-left: 25rem;
-  position: absolute;
-  /* box-shadow: 0px 7px 15px #0000003b; */
-  border-radius: 5px;
-  /* padding: 2rem; */
-}
-
-.icon {
-  position: absolute;
-  /* border: solid tomato;  */
-  /* display: inline-block; */
-  width: 100px;
-  height: 100px;
-  top: 11rem;
-  left: 34rem;
-}
