@@ -3,19 +3,19 @@ let imgContainerEl = document.getElementById("closet");
 let changeColorContainer =document.getElementById('changeColor');
 // let iconPlace = document.getElementById("shirrt");
 let iconsContenierEl=document.getElementById("icons")
-let icons=["ballon.png", "bekind.png", "pizza.png", "ltcu.jpg", 'grunge.png', 'Etcher.png','logo.jpg','logo2.jpeg','a123 .png']; 
+let icons=["ballon.png", "bekind.png", "pizza.png", "ltcu.jpg", 'grunge.png', 'Etcher.png','logo.jpg','a123 .png','facebook-like.png','pizza-slices.png','taco.png','cat.png']; 
 let  iconImg;
 let  newIcon;
 let tsColorInLlocal ;
 
-let abd= ['blue.png'];
+let abd= ['Black.png'];
 tsColorInLlocal = JSON.stringify(abd[0]);
   localStorage.setItem("tsColor", tsColorInLlocal);
 
 function placeIcon() {
  iconImg = JSON.parse(localStorage.getItem('clickedicon')) || [];
      newIcon = document.createElement("img");
-    newIcon.setAttribute("src", "images/" + iconImg);
+    newIcon.setAttribute("src", "images/icon/" + iconImg);
     newIcon.setAttribute("class", "icon");
 
     imgContainerEl.appendChild(newIcon);
@@ -23,18 +23,18 @@ function placeIcon() {
   
 placeIcon();
 let imgs=[];
-let tsColor=['black.png','gray.png','blue.png','5.png','6.png','7.png','8.png','9.png','10.png','11.png','12.png','13.png','14.png'];
+let tsColor=['Black.png','Gray.png','Blue.png','Orange.png','Yellow.png','Megenta.png','Sea-Green.png','Mid-Night-Blue.png','Sonar-Green.png','white.png','Fever-Red.png','Rioja-Red.png','Mint-Green.png'];
 for (let i = 2; i < 15; i++) {
   imgs.push(`${i}a.jpg`);
 }
 // console.log(tsColor);
 let imgEl2;
 
-function render(lengTh,imgFile,contenerName,changeClass) {
+function render(lengTh,imgFile,contenerName,changeClass,imgPath) {
   for (let i = 0; i < lengTh; i++) {
     // liEl = document.createElement("li");
     imgEl2 = document.createElement("img");
-    imgEl2.setAttribute("src", "images/" + imgFile[i]);
+    imgEl2.setAttribute("src", imgPath + imgFile[i]);
     imgEl2.setAttribute("class",changeClass );
     imgEl2.setAttribute("width", "40px");
     imgEl2.setAttribute("id", i);
@@ -44,9 +44,9 @@ function render(lengTh,imgFile,contenerName,changeClass) {
   }
 }
 
-render(imgs.length,imgs,changeColorContainer,'circle');
-render(icons.length,icons,iconsContenierEl,'icons');
-
+render(imgs.length,imgs,changeColorContainer,'circle',"images/ManColor/");/* color box*/
+render(icons.length,icons,iconsContenierEl,'icons',"images/icon/");/*man's tshirt */
+// render(imgs.length,imgs,changeColorContainer,'circle');/* color box*/
 
 let  imgTsEl;
 changeColorContainer.addEventListener("click", changeColor);
@@ -57,7 +57,7 @@ function changeColor (event){
   imgContainerEl.textContent='';
   imgTsEl = document.createElement("img");
   imgTsEl.setAttribute('class','shirrt')
-  imgTsEl.setAttribute("src", "images/"+tsColor[ColorIndex]);
+  imgTsEl.setAttribute("src", "images/tshirt/"+tsColor[ColorIndex]);
   imgContainerEl.appendChild(imgTsEl);
 
   tsColorInLlocal = JSON.stringify(tsColor[ColorIndex]);

@@ -47,6 +47,13 @@ for (let i = 0; i < tshirt.design.length; i++) {
   let tdEl2 = document.createElement('td');
   tdEl2.textContent=`${tshirt.design[i].icon.split('.')[0]}`;
   trEl.appendChild(tdEl2);
+  let tdEl4 = document.createElement('td');
+  let img = document.createElement('img');
+  img.setAttribute("src", "images/icon/taco.png");
+  img.setAttribute("width", "30px");
+  img.setAttribute("height", "30px");
+  tdEl4.appendChild(img);
+  trEl.appendChild(tdEl4);
   let tdEl3 = document.createElement('td');
   tdEl3.textContent=`${tshirt.design[i].tsColor.split('.')[0]}`;
   trEl.appendChild(tdEl3);
