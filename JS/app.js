@@ -28,7 +28,7 @@ function goToCstmPage(event) {
    clickedicon= JSON.stringify(imgFile[imgIndex]);
   localStorage.setItem("clickedicon", clickedicon);
 
-  location.href = "shirt.html";
+  location.href = "HTML/tshirt.html";
   
 }
 
@@ -38,7 +38,7 @@ function goto (){
   let imgIndex =2;
   clickedicon= JSON.stringify(imgFile[imgIndex]);
  localStorage.setItem("clickedicon", clickedicon);
-location.href = "shirt.html";
+location.href = "HTML/tshirt.html";
 
 }
 
