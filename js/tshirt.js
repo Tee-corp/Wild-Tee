@@ -1,18 +1,17 @@
 'use strict';
 let imgContainerEl = document.getElementById("closet");
 let changeColorContainer =document.getElementById('changeColor');
-let iconPlace = document.getElementById("shirrt");
+// let iconPlace = document.getElementById("shirrt");
 let iconsContenierEl=document.getElementById("icons")
 let icons=["ballon.png", "bekind.png", "pizza.png", "ltcu.jpg", 'grunge.png', 'Etcher.png','logo.jpg','logo2.jpeg','a123 .png']; 
 let  iconImg;
 let  newIcon;
 let tsColorInLlocal ;
 
-let abd= ['3.png'];
+let abd= ['blue.png'];
 tsColorInLlocal = JSON.stringify(abd[0]);
   localStorage.setItem("tsColor", tsColorInLlocal);
 
-  
 function placeIcon() {
  iconImg = JSON.parse(localStorage.getItem('clickedicon')) || [];
      newIcon = document.createElement("img");
@@ -24,10 +23,9 @@ function placeIcon() {
   
 placeIcon();
 let imgs=[];
-let tsColor=[];
+let tsColor=['black.png','gray.png','blue.png','5.png','6.png','7.png','8.png','9.png','10.png','11.png','12.png','13.png','14.png'];
 for (let i = 2; i < 15; i++) {
   imgs.push(`${i}a.jpg`);
-  tsColor.push(`${i}.png`);
 }
 // console.log(tsColor);
 let imgEl2;

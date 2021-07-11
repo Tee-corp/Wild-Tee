@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Store</title>
+  <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/cart.css">
+    <script
+    src="https://kit.fontawesome.com/eac52206dc.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Store</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cart.html">Cart</a><span id="itemCount"></span></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="deck col-1">
+      <div class="card">
+        <header>
+          <h1>Your Cart</h1>
+        </header>
+        <div class="copy">
+          <ol>
+            <li>Click the "X" next to any item to remove it from your cart</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <a href="shirt.html">go to tshirt page </a>
+    <section class="deck col-1">
+      <div id="cart-container" class="card">
+        <table id="cart">
+          <thead>
+            <tr>Item
+              <th>Remove</th>
+              <th>Quantity</th>
+              <th>icon</th>
+              <th>t-shirt color</th>
+            </tr>
+          </thead>
+          <tbody id="body"></tbody>
+        </table>
+      </div>
+    </section>
+    <!-- ************************************************************************************************** -->
+    <section>
+
+      <button class="openButton" id="openBtn" >Open Form</button>
+    <div class="popUpForm">
+      <form action="" id="payForm" class="pop2">
+        
+      <fieldset>
+      <legend>Payment details</legend>
+      <a href="cart.html" class="closeBtn" id="closeBtn1"><i class="fas fa-times"></i></a>
+      <!-- <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39219/preview.png" class="close" alt=""> -->
+      <label for="">Card Number</label>
+      <input type="text" placeholder="valid card number" name="form" id="input1">
+      
+      <label for="" id="label1">Card Number</label>
+      <input type="text" placeholder="MM/yy" name="form" id="input2">
+      
+      <label for="" id="label2">CV code</label>
+      <input type="text" placeholder="CVC" name="form" id="input3">
+      
+      <label for="" id="label3">COUPON CODE</label>
+      <input type="text" placeholder="copon" name="form" id="input2">
+      
+      <button id="btnFin">FINISH</button>
+      </fieldset>
+      </form>
+      </div>
+    </section>
+    <!-- mona -->
+    <!-- ************************************************************************************************************* -->
+  </main>
+
+  <footer>
+    
+  </footer>
+  <!-- <script src='app2.js'></script> -->
+  <script src='js/cart.js'></script>
+</body>
+
+</html>

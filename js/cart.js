@@ -37,7 +37,7 @@ for (let i = 0; i < tshirt.design.length; i++) {
   tdEl = document.createElement('td');
    aEl =document.createElement('a');
   aEl.setAttribute('id',`${i}`)
-  aEl.textContent='x';
+  aEl.innerHTML='<i class="far fa-trash-alt"></i>';
   aEl.addEventListener('click', removeItemFromCart);
   tdEl.appendChild(aEl);
   trEl.appendChild(tdEl);
@@ -80,4 +80,25 @@ function saveToLocalStorage() {
   };
   
 renderCart();
+// ******************************************************************************************
+// mone
+let openEl=document.getElementById('openBtn');
 
+openEl.addEventListener('click',showPop)
+
+function showPop(event){
+
+  document.querySelector(".popUpForm").style.display="flex"
+  event.preventDefault();
+
+}
+// let closeForm=document.getElementById('closeBtn1')
+//   closeForm.addEventListener("click",unShow)
+  
+//   function unShow(event){
+//     event.preventDefault();
+//     closeForm.querySelector(".popUpForm").style.display="none"
+//   }
+
+
+// *****************************************************************************************************

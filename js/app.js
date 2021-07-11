@@ -1,5 +1,19 @@
 'use strict';
 
+// ***********************************************************************************************************
+// let iconImgs = [];
+
+// function Img(name) {
+//   this.imgName = name.split(".")[0];
+//   this.filePath = name;
+//   iconImgs.push(this);
+// }
+
+// for (let i = 0; i < imgFile.length; i++) {
+//   // object maker
+//   new Img(imgFile[i]);
+// 
+// ************************************************************************************************************
 let imgContainer = document.getElementById("ob");
 let imgFile = ["ballon.png", "bekind.png", "pizza.png", "ltcu.jpg", 'grunge.png', 'Etcher.png','logo.jpg','logo2.jpeg','a123 .png'];
 let imgEl;
@@ -13,9 +27,9 @@ function render() {
 
     imgContainer.appendChild(imgEl);
   }
+  
 }
 render();
-
 
 imgContainer.addEventListener("click", goToCstmPage);
 
@@ -31,7 +45,6 @@ function goToCstmPage(event) {
   location.href = "shirt.html";
   
 }
-
 let btnEl= document.getElementById('btn');
 btnEl.addEventListener("click",goto);
 function goto (){
