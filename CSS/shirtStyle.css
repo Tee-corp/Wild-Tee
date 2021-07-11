@@ -1,0 +1,86 @@
+html{
+    box-sizing: content-box;
+  }
+  #closet {
+    /* border: solid tomato;  */
+    
+    position: relative;
+  }
+  
+  .shirrt {
+    /* border: solid tomato; */
+    width: 400px;
+    height: 450px;
+    margin-top: 7rem;
+    margin-left: 25rem;
+    position: absolute;
+  }
+  
+  
+  .icon {
+    position: absolute;
+    /* border: solid tomato;  */
+    /* display: inline-block; */
+    width: 140px;
+    height: 110px;
+    top: 14rem;
+    left: 32.8rem;}
+  
+  #changeColor{
+    
+    float: right;
+    margin-right: 8%;
+    margin-top: 160px;
+  }
+  #changeColor .circle{
+    border: rgb(171, 201, 202) 1px solid;
+   box-shadow: rgb(100, 100, 97) 0px 3px 3px ;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 1px;
+    margin: 2px;
+    width: 37px;
+    height: 22px;
+    /* z-index:1;
+    position: relative; */
+  }
+  .circle:hover{
+    background-image: linear-gradient( 
+      270deg
+       , #4261eb5e 0%, #7b808b56 74%);
+       transform: scale(1.2);
+    transition: 0.2s;
+  }
+  #submit{
+    float: right;
+    margin-right: -73%;
+    margin-top: 256px;
+  }
+  #icons{
+    float: right;
+    margin-right: 75%;
+    margin-top: -27px;
+    
+  }
+  #icons img {
+  
+    border: rgb(171, 201, 202) 1px solid;
+    box-shadow: rgb(100, 100, 97) 0px 3px 3px ;
+     background-color: rgb(255, 255, 255);
+     border-radius: 10px;
+     padding: 1px;
+     margin: 2px;
+     width: 50px;
+     height: 50px;
+  }
+  #icons img:hover{
+    background-image: linear-gradient( 
+      270deg
+       , #4261eb5e 0%, #7b808b56 74%);
+       transform: scale(1.2);
+    transition: 0.2s;
+  }
+  #catalog{
+    margin-bottom: 20px;
+    margin-left: -100px;
+  }
