@@ -3,7 +3,8 @@
 let table = document.getElementById("cart");
 let tbodyEl = document.getElementById("body");
 table.appendChild(tbodyEl);
-table.addEventListener("click", removeItemFromCart);
+table.addEventListener('click', removeItemFromCart);
+
 let tshirt = {
   design: [],
 };
@@ -11,6 +12,7 @@ let tshirt = {
 function loadCart() {
   let tShirtItems = JSON.parse(localStorage.getItem("t-shirtInCart")) || [];
   tshirt.design = tShirtItems;
+}
 
   //   console.log(tshirt);
 };
@@ -30,10 +32,7 @@ let tdEl;
 let aEl;
 
 
-
-function showCart(){
-
-
+function showCart() {
 
   for (let i in tshirt.design) {
 
@@ -63,18 +62,21 @@ function showCart(){
     trEl.appendChild(tdEl3);
     tbodyEl.appendChild(trEl);
   }
-};
+
+}
+
 
 
 function removeItemFromCart(event) {
   event.preventDefault();
-  removeItem(event.target.id);
+  removeItem(event);
   saveToLocalStorage();
   renderCart();
 };
 
-function removeItem(index) {
-  tshirt.design.splice(Number(index), 1);
+function removeItem(event) {
+  event.preventDefault();
+  tshirt.design.splice(Number(event.target.id),1);
 }
 
 function saveToLocalStorage() {
@@ -83,6 +85,8 @@ function saveToLocalStorage() {
 }
 
 renderCart();
+
+
 // ******************************************************************************************
 // mone
 let openEl = document.getElementById("openBtn");
