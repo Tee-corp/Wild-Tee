@@ -4,6 +4,7 @@ let table = document.getElementById('cart');
 let tbodyEl = document.getElementById('body');
 table.appendChild(tbodyEl);
 table.addEventListener('click', removeItemFromCart);
+
 let tshirt = {
   design: [],
 };
@@ -11,7 +12,6 @@ let tshirt = {
 function loadCart() {
   let tShirtItems = JSON.parse(localStorage.getItem('t-shirtInCart')) || [];
   tshirt.design = tShirtItems;
-//   console.log(tshirt);
 }
 
 
@@ -33,29 +33,6 @@ let aEl;
 
 
 function showCart() {
-<<<<<<< HEAD
-  
-for (let i = 0; i < tshirt.design.length; i++) {
-   trEl=document.createElement('tr');
-  tdEl = document.createElement('td');
-   aEl =document.createElement('a');
-  aEl.setAttribute('id',`${i}`)
-  aEl.innerHTML='<i class="far fa-trash-alt"></i>';
-  design[i].addEventListener('click', removeItemFromCart);
-  tdEl.appendChild(aEl);
-  trEl.appendChild(tdEl);
-  let tdEl1 = document.createElement('td');
-  tdEl1.textContent=`${tshirt.design[i].quantity}`;
-  trEl.appendChild(tdEl1);
-  let tdEl2 = document.createElement('td');
-  tdEl2.textContent=`${tshirt.design[i].icon.split('.')[0]}`;
-  trEl.appendChild(tdEl2);
-  let tdEl3 = document.createElement('td');
-  tdEl3.textContent=`${tshirt.design[i].tsColor.split('.')[0]}`;
-  trEl.appendChild(tdEl3);
-  tbodyEl.appendChild(trEl);
-}
-=======
 
   for (let i in tshirt.design) {
     trEl = document.createElement('tr');
@@ -85,7 +62,6 @@ for (let i = 0; i < tshirt.design.length; i++) {
     tbodyEl.appendChild(trEl);
 
   }
->>>>>>> main
 
 }
 
@@ -94,14 +70,15 @@ for (let i = 0; i < tshirt.design.length; i++) {
 function removeItemFromCart(event) {
 
   event.preventDefault();
-  removeItem(event.target.id);
+  removeItem(event);
   saveToLocalStorage();
   renderCart();
 }
 
 
-function removeItem(index) {
-  tshirt.design.splice(Number(index),1);
+function removeItem(event) {
+  event.preventDefault();
+  tshirt.design.splice(Number(event.target.id),1);
 }
 
 
@@ -112,6 +89,8 @@ function saveToLocalStorage() {
 }
 
 renderCart();
+
+
 // ******************************************************************************************
 // mone
 let openEl = document.getElementById('openBtn');
