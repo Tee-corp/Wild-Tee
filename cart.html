@@ -4,43 +4,32 @@
 <head>
   <title> Store</title>
   <link rel="stylesheet" href="CSS/reset.css">
-  <link rel="stylesheet" href="CSS/style.css">
+  <!-- <link rel="stylesheet" href="CSS/style.css"> -->
   <link rel="stylesheet" href="CSS/cart.css">
   <script src="https://kit.fontawesome.com/eac52206dc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-  <header>
-    <h1>Store</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cart.html">Cart</a><span id="itemCount"></span></li>
-      </ul>
-    </nav>
-  </header>
+  
 
   <main>
 
     <section class="deck col-1">
       <div class="card">
         <header>
-          <h1>Your Cart</h1>
+          <nav>
+              
+          </nav>
         </header>
-        <div class="copy">
-          <ol>
-            <li>Click the "X" next to any item to remove it from your cart</li>
-          </ol>
-        </div>
-      </div>
+       
     </section>
     <a href="shirt.html">go to tshirt page </a>
-    <section class="deck col-1">
-      <div id="cart-container" class="card">
+    <section class="decContaner">
+      <!-- <div id="cart-container" class="card"> -->
         <table id="cart">
           <thead>
-            <tr>Item
+            <tr id="trEl">Item
               <th>Remove</th>
               <th>Quantity</th>
               <th>icon name</th>
@@ -48,17 +37,19 @@
               <th>t-shirt color</th>
             </tr>
           </thead>
+          
           <tbody id="body">
 
             
           </tbody>
         </table>
-      </div>
+      <!-- </div> -->
+       <button class="openButton" id="openBtn">Open Form</button>
     </section>
     <!-- ************************************************************************************************** -->
     <section>
 
-      <button class="openButton" id="openBtn">Open Form</button>
+     
       <div class="popUpForm">
         <form action="" id="payForm" class="pop2">
 
