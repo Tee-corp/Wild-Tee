@@ -1,21 +1,9 @@
 'use strict';
 
-// ***********************************************************************************************************
-// let iconImgs = [];
-
-// function Img(name) {
-//   this.imgName = name.split(".")[0];
-//   this.filePath = name;
-//   iconImgs.push(this);
-// }
-
-// for (let i = 0; i < imgFile.length; i++) {
-//   // object maker
-//   new Img(imgFile[i]);
-// 
-// ************************************************************************************************************
 let imgContainer = document.getElementById("ob");
-let imgFile = ["ballon.png", "bekind.png", "pizza.png", "ltcu.jpg", 'grunge.png', 'Etcher.png','logo.jpg','a123 .png','facebook-like.png','pizza-slices.png','taco.png','cat.png'];
+let imgFile = ["ballon.png", "bekind.png", "pizza.png", 'grunge.png', 'Etcher.png',  'a123 .png', 'pizza-slices.png', 'cat.png','money-bag.png','accident.png'];
+
+
 let imgEl;
 function render() {
   for (let i = 0; i < imgFile.length; i++) {
@@ -32,25 +20,24 @@ render();
 
 imgContainer.addEventListener("click", goToCstmPage);
 
-let clickedicon='grunge.png';
-localStorage.setItem("clickedicon", clickedicon);
-
 function goToCstmPage(event) {
   console.log(event.target.id);
   let imgIndex = event.target.id
-   clickedicon= JSON.stringify(imgFile[imgIndex]);
+  let clickedicon = JSON.stringify(imgFile[imgIndex]);
   localStorage.setItem("clickedicon", clickedicon);
 
   location.href = "shirt.html";
-  
 }
-let btnEl= document.getElementById('btn');
-btnEl.addEventListener("click",goto);
-function goto (){
-  let imgIndex =2;
-  clickedicon= JSON.stringify(imgFile[imgIndex]);
- localStorage.setItem("clickedicon", clickedicon);
-location.href = "shirt.html";
+
+
+let btnEl = document.getElementById('btn');
+btnEl.addEventListener("click", gotoShirtPage);
+
+function gotoShirtPage() {
+  let imgIndex = 7;
+  let clickedicon = JSON.stringify(imgFile[imgIndex]);
+  localStorage.setItem("clickedicon", clickedicon);
+  location.href = "shirt.html";
 
 }
 
