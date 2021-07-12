@@ -35,10 +35,15 @@ function showCart() {
   for (let i = 0; i < tshirt.design.length; i++) {
     trEl=document.createElement('tr');
     tdEl = document.createElement('td');
+<<<<<<< HEAD
     aEl =document.createElement('a');
     aEl.setAttribute('id',`${i}`);
     aEl.innerHTML='<i class="far fa-trash-alt"></i>';
     aEl.addEventListener('click', removeItemFromCart);
+=======
+    aEl = document.createElement('a');
+    aEl.innerHTML = `<i id='${i}' class="far fa-trash-alt"></i>`;
+>>>>>>> origin/main
     tdEl.appendChild(aEl);
     trEl.appendChild(tdEl);
     let tdEl1 = document.createElement('td');
@@ -47,6 +52,18 @@ function showCart() {
     let tdEl2 = document.createElement('td');
     tdEl2.textContent=`${tshirt.design[i].icon.split('.')[0]}`;
     trEl.appendChild(tdEl2);
+<<<<<<< HEAD
+=======
+    // **************************************************************
+    let tdEl4 = document.createElement('td');
+    let img = document.createElement('img');
+    img.setAttribute("src", "images/icon/" + tshirt.design[i].icon);
+    img.setAttribute("width", "40px");
+    img.setAttribute("height", "40px");
+    tdEl4.appendChild(img);
+// *******************************************************************
+    trEl.appendChild(tdEl4);
+>>>>>>> origin/main
     let tdEl3 = document.createElement('td');
     tdEl3.textContent=`${tshirt.design[i].tsColor.split('.')[0]}`;
     trEl.appendChild(tdEl3);
@@ -56,20 +73,28 @@ function showCart() {
 
 
 function removeItemFromCart(event) {
+<<<<<<< HEAD
 
   console.log(event.target.id);
+=======
+ 
+>>>>>>> origin/main
   event.preventDefault();
   removeItem(event.target.id) ;
   saveToLocalStorage();
   renderCart();
 }
 
-function removeItem(index) {
-  console.log(index);
 
+<<<<<<< HEAD
   tshirt.design.splice(index,1);
   console.log(tshirt);
 }
+=======
+function removeItem(index) {
+  tshirt.design.splice(Number(index),1); 
+};
+>>>>>>> origin/main
 
 
 function saveToLocalStorage() {
