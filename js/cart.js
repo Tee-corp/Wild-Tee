@@ -92,14 +92,98 @@ function showPop(event){
   event.preventDefault();
 
 }
-let closeForm=document.getElementById('closeBtn1');
-closeForm.addEventListener('click',unShow);
+// let closeForm=document.getElementById('closeBtn1');
+// closeForm.addEventListener('click',unShow);
 
-function unShow(event){
+// function unShow(event){
 
-  closeForm.querySelector('.popUpForm').style.display='none';
+//   closeForm.querySelector('.popUpForm').style.display='none';
+//   event.preventDefault();
+// }
+
+
+// ******************************************form javascript*******************************************************
+let orderRes=document.getElementById('payForm');
+let ulEl=document.getElementById('test');
+let buttonRes=document.getElementById('btnFin');
+let divlabel1=document.getElementById('div1');
+let details=[];
+
+
+function FinalCheck(name,type,check){
+  this.customerName=name;
+  this.paymentType=type;
+  this.checkdeliver=check;
+  details.push(this);
+
+}
+divlabel1.addEventListener('click',finalStep);
+
+function finalStep(event){
   event.preventDefault();
+  let name=event.target.formUser.value;
+  let type=event.target.cardPay.value;
+  let check=event.target.check.value;
+
+  new FinalCheck(name,type,check);
+
+  testValue();
+
+}
+function saveTestStorage(){
+  let storage=JSON.stringify(FinalCheck.details);
+  localStorage.setItem('result',storage);
+
 }
 
+function readStorage(){
 
-// *****************************************************************************************************
+  let objString=localStorage.getItem('result');
+  let objNorm=JSON.parse(objString);
+  if(objNorm !==null){
+    FinalCheck.details=objNorm;
+    testValue();
+
+  }
+
+}
+readStorage();
+let checkDelver;
+function testValue(){
+
+  for(let i=0;i<details.length;i++){
+
+    let liElement=document.createElement('li');
+
+    if(details.length[i].check){
+      checkDelver='aramix';
+    }
+    else{
+      checkDelver='Express';
+
+    }
+    liElement.textContent=`welcome our customer ${details.length[i].name} you went to pay using ${details.length[i].type} and recived product using ${checkDelver}`;
+    ulEl.appendChild(liElement);
+    orderRes.appendChild(ulEl);
+
+  }
+  saveTestStorage();
+}
+buttonRes.addEventListener('click',finalStep);
+// move from page to another
+
+let googleBut=document.getElementById('gog');
+let faceboBut=document.getElementById('fac');
+
+googleBut.addEventListener('click',goGoogl);
+faceboBut.addEventListener('click',goFace);
+
+function goGoogl(event){
+  event.preventDefault();
+  window.location.href='https://accounts.google.com/signin/v2/identifier?service=mail&lp=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin';
+}
+
+function goFace(event){
+  event.preventDefault();
+  window.location.href='https://web.facebook.com/?_rdc=1&_rdr';
+}
