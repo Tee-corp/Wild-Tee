@@ -6,7 +6,7 @@ table.appendChild(tbodyEl);
 table.addEventListener('click', removeItemFromCart);
 let tshirt = {
   design: [],
-}
+};
 
 function loadCart() {
   let tShirtItems = JSON.parse(localStorage.getItem('t-shirtInCart')) || [];
@@ -50,11 +50,11 @@ function showCart() {
     // **************************************************************
     let tdEl4 = document.createElement('td');
     let img = document.createElement('img');
-    img.setAttribute("src", "images/icon/" + tshirt.design[i].icon);
-    img.setAttribute("width", "40px");
-    img.setAttribute("height", "40px");
+    img.setAttribute('src', 'images/icon/' + tshirt.design[i].icon);
+    img.setAttribute('width', '40px');
+    img.setAttribute('height', '40px');
     tdEl4.appendChild(img);
-// *******************************************************************
+    // *******************************************************************
     trEl.appendChild(tdEl4);
     let tdEl3 = document.createElement('td');
     tdEl3.textContent = `${tshirt.design[i].tsColor.split('.')[0]}`;
@@ -62,13 +62,13 @@ function showCart() {
     tbodyEl.appendChild(trEl);
 
   }
-  
+
 }
 
 
 
 function removeItemFromCart(event) {
- 
+
   event.preventDefault();
   removeItem(event.target.id);
   saveToLocalStorage();
@@ -77,26 +77,26 @@ function removeItemFromCart(event) {
 
 
 function removeItem(index) {
-  tshirt.design.splice(Number(index),1); 
-};
+  tshirt.design.splice(Number(index),1);
+}
 
 
 function saveToLocalStorage() {
 
   let tShirtInCart = JSON.stringify(tshirt.design);
   localStorage.setItem('t-shirtInCart', tShirtInCart);
-};
+}
 
 renderCart();
 // ******************************************************************************************
 // mone
 let openEl = document.getElementById('openBtn');
 
-openEl.addEventListener('click', showPop)
+openEl.addEventListener('click', showPop);
 
 function showPop(event) {
 
-  document.querySelector(".popUpForm").style.display = "flex"
+  document.querySelector('.popUpForm').style.display = 'flex';
   event.preventDefault();
 
 }
