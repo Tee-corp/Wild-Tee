@@ -33,6 +33,29 @@ let aEl;
 
 
 function showCart() {
+<<<<<<< HEAD
+  
+for (let i = 0; i < tshirt.design.length; i++) {
+   trEl=document.createElement('tr');
+  tdEl = document.createElement('td');
+   aEl =document.createElement('a');
+  aEl.setAttribute('id',`${i}`)
+  aEl.innerHTML='<i class="far fa-trash-alt"></i>';
+  design[i].addEventListener('click', removeItemFromCart);
+  tdEl.appendChild(aEl);
+  trEl.appendChild(tdEl);
+  let tdEl1 = document.createElement('td');
+  tdEl1.textContent=`${tshirt.design[i].quantity}`;
+  trEl.appendChild(tdEl1);
+  let tdEl2 = document.createElement('td');
+  tdEl2.textContent=`${tshirt.design[i].icon.split('.')[0]}`;
+  trEl.appendChild(tdEl2);
+  let tdEl3 = document.createElement('td');
+  tdEl3.textContent=`${tshirt.design[i].tsColor.split('.')[0]}`;
+  trEl.appendChild(tdEl3);
+  tbodyEl.appendChild(trEl);
+}
+=======
 
   for (let i in tshirt.design) {
     trEl = document.createElement('tr');
@@ -62,6 +85,7 @@ function showCart() {
     tbodyEl.appendChild(trEl);
 
   }
+>>>>>>> main
 
 }
 
