@@ -15,19 +15,18 @@
 // 
 // ************************************************************************************************************
 let imgContainer = document.getElementById("ob");
-let imgFile = ["ballon.png", "bekind.png", "pizza.png", "ltcu.jpg", 'grunge.png', 'Etcher.png','logo.jpg','logo2.jpeg','a123 .png'];
+let imgFile = ["ballon.png", "bekind.png", "pizza.png", "ltcu.jpg", 'grunge.png', 'Etcher.png','logo.jpg','a123 .png','facebook-like.png','pizza-slices.png','taco.png','cat.png'];
 let imgEl;
 function render() {
   for (let i = 0; i < imgFile.length; i++) {
     let imgEl = document.createElement("img");
-    imgEl.setAttribute("src", "images/" + imgFile[i]);
+    imgEl.setAttribute("src", "images/icon/" + imgFile[i]);
     imgEl.setAttribute("class", "item");
     imgEl.setAttribute("width", "100px");
     imgEl.setAttribute("id", i);
 
     imgContainer.appendChild(imgEl);
   }
-  
 }
 render();
 

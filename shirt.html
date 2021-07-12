@@ -5,42 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/shirtStyle.css">
+    <script
+      src="https://kit.fontawesome.com/eac52206dc.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
 </head>
 
 <body>
-   <header>
-</header>
+
+  <div id="FV">
+    <nav id="fixed-nav">
+      <span>WildTee</span>
+      <div id="icon-bar">
+        <a  href="index.html"><i class="fas fa-home"></i></a>
+      <a href="AboutUs.html"><i class="fas fa-users"></i></a>
+      <a href="shirt.html"><i class="fas fa-tshirt"></i></a>
+      <a class="I" href="cart.html"><i class="fas  fa-shopping-cart"></i></a>
+    </div>
+    </nav>
+  </div>
+
+
+   
 <main>
-<section>
+
     <div id="closet">
  
-   
-        <img class="shirrt" src="images/black.png" >
+   <div id="shirt-card">
+        <img class="shirrt" src="images/tshirt/Black.png" >
+        <div id="icons">
+        
+        </div>
+      </div>
+
+
+        <div id="changeColor">
+
+        </div>
+        
+        <div id="submit">
+            <form id="catalog">
+                <fieldset>
+                  <label>
+                    <span>Quantity</span>
+                    <input id="quantity" type="number" required="required"placeholder="write a number" />
+                  </label>
+                  <input type="submit" value="Add To Cart" />
+                  <p>Pick gender:</p>
+  <input class="checkbox" type="checkbox" >
+  <label  for="html">Male</label><br>
+  <input class="checkbox" type="checkbox" >
+  <label for="css">Feamle</label><br>
+                </fieldset>
+              </form>
+        
+        </div>
+        <a id="proc" href="cart.html">Proceed to checkout</a>
     </div>
 
-<div id="changeColor">
 
-</div>
-<div id="icons">
 
-</div>
-<div id="submit">
-    <form id="catalog">
-        <fieldset>
-          <label>
-            <span>Quantity</span>
-            <input id="quantity" type="number" required="required"placeholder="write a number" />
-          </label>
-          <input type="submit" value="Add To Cart" />
-        </fieldset>
-      </form>
-<!-- <button id="btn">add to cart </button> -->
 
-</div>
-</section>
-<a href="cart.html">go to cart</a>
    </main>
 
 </body>

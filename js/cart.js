@@ -3,7 +3,7 @@
 let table = document.getElementById('cart');
 let tbodyEl = document.getElementById('body');
 table.appendChild(tbodyEl);
-
+table.addEventListener('click', removeItemFromCart);
 let tshirt = {
   design : [],
 };
@@ -53,7 +53,6 @@ function showCart() {
     tbodyEl.appendChild(trEl);
   }
 
-}
 
 
 function removeItemFromCart(event) {
@@ -65,8 +64,8 @@ function removeItemFromCart(event) {
   renderCart();
 }
 
-
 function removeItem(index) {
+  console.log(index);
 
   tshirt.design.splice(index,1);
   console.log(tshirt);
@@ -82,11 +81,11 @@ function saveToLocalStorage() {
 renderCart();
 // ******************************************************************************************
 // mone
-let openEl=document.getElementById('openBtn');
+let openEl = document.getElementById('openBtn');
 
 openEl.addEventListener('click',showPop);
 
-function showPop(event){
+function showPop(event) {
 
   document.querySelector('.popUpForm').style.display='flex';
   event.preventDefault();
