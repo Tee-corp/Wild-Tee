@@ -1,17 +1,17 @@
 'use strict';
 
-let  table = document.getElementById('cart');
+let table = document.getElementById('cart');
 let tbodyEl = document.getElementById('body');
 table.appendChild(tbodyEl);
-
+table.addEventListener('click', removeItemFromCart);
 let tshirt = {
-    design : [],
+  design: [],
 }
 
 function loadCart() {
-  let  tShirtItems = JSON.parse(localStorage.getItem('t-shirtInCart')) || [];
-  tshirt.design= tShirtItems;
-  console.log(tshirt);
+  let tShirtItems = JSON.parse(localStorage.getItem('t-shirtInCart')) || [];
+  tshirt.design = tShirtItems;
+//   console.log(tshirt);
 }
 
 
@@ -23,85 +23,90 @@ function renderCart() {
 
 function clearCart() {
 
-tbodyEl.textContent='';
+  tbodyEl.textContent = '';
 }
 
 
 let trEl;
-  let tdEl;
-  let aEl;
+let tdEl;
+let aEl;
+
+
 function showCart() {
+
+  for (let i in tshirt.design) {
+    trEl = document.createElement('tr');
+    tdEl = document.createElement('td');
+     tdEl.id=i;
+    aEl = document.createElement('a');
+    // aEl.setAttribute('id', i);
+    aEl.innerHTML = '<i class="far fa-trash-alt"></i>';
+    tdEl.appendChild(aEl);
+    trEl.appendChild(tdEl);
+    let tdEl1 = document.createElement('td');
+    tdEl1.textContent = `${tshirt.design[i].quantity}`;
+    trEl.appendChild(tdEl1);
+    let tdEl2 = document.createElement('td');
+    tdEl2.textContent = `${tshirt.design[i].icon.split('.')[0]}`;
+    trEl.appendChild(tdEl2);
+    // ****************************************************
+    let tdEl4 = document.createElement('td');
+    let img = document.createElement('img');
+    img.setAttribute("src", "images/icon/" + tshirt.design[i].icon);
+    img.setAttribute("width", "40px");
+    img.setAttribute("height", "40px");
+    tdEl4.appendChild(img);
+// ****************************************************
+    trEl.appendChild(tdEl4);
+    let tdEl3 = document.createElement('td');
+    tdEl3.textContent = `${tshirt.design[i].tsColor.split('.')[0]}`;
+    trEl.appendChild(tdEl3);
+    tbodyEl.appendChild(trEl);
+
+  }
   
-for (let i = 0; i < tshirt.design.length; i++) {
-   trEl=document.createElement('tr');
-  tdEl = document.createElement('td');
-   aEl =document.createElement('a');
-  aEl.setAttribute('id',`${i}`)
-  aEl.innerHTML='<i class="far fa-trash-alt"></i>';
-  aEl.addEventListener('click', removeItemFromCart);
-  tdEl.appendChild(aEl);
-  trEl.appendChild(tdEl);
-  let tdEl1 = document.createElement('td');
-  tdEl1.textContent=`${tshirt.design[i].quantity}`;
-  trEl.appendChild(tdEl1);
-  let tdEl2 = document.createElement('td');
-  tdEl2.textContent=`${tshirt.design[i].icon.split('.')[0]}`;
-  trEl.appendChild(tdEl2);
-  let tdEl4 = document.createElement('td');
-  let img = document.createElement('img');
-  img.setAttribute("src", "images/icon/taco.png");
-  img.setAttribute("width", "30px");
-  img.setAttribute("height", "30px");
-  tdEl4.appendChild(img);
-  trEl.appendChild(tdEl4);
-  let tdEl3 = document.createElement('td');
-  tdEl3.textContent=`${tshirt.design[i].tsColor.split('.')[0]}`;
-  trEl.appendChild(tdEl3);
-  tbodyEl.appendChild(trEl);
 }
 
-}
 
 
 function removeItemFromCart(event) {
-  
-  console.log(event.target.id);
+  console.log('id ',event.target.id);
   event.preventDefault();
-removeItem(event.target.id) ;
-saveToLocalStorage();
-renderCart();
+  removeItem(event.target.id);
+  saveToLocalStorage();
+  renderCart();
 }
 
-
 function removeItem(index) {
+  console.log(index);
 
-    tshirt.design.splice(index,1);
-    console.log(tshirt);
-  };
-
+  tshirt.design.splice(Number(4),1);
   
+};
+
+
 function saveToLocalStorage() {
 
-    let tShirtInCart = JSON.stringify(tshirt.design);
-    localStorage.setItem('t-shirtInCart',tShirtInCart);
-  };
-  
+  let tShirtInCart = JSON.stringify(tshirt.design);
+  localStorage.setItem('t-shirtInCart', tShirtInCart);
+};
+
 renderCart();
 // ******************************************************************************************
 // mone
-let openEl=document.getElementById('openBtn');
+let openEl = document.getElementById('openBtn');
 
-openEl.addEventListener('click',showPop)
+openEl.addEventListener('click', showPop)
 
-function showPop(event){
+function showPop(event) {
 
-  document.querySelector(".popUpForm").style.display="flex"
+  document.querySelector(".popUpForm").style.display = "flex"
   event.preventDefault();
 
 }
 // let closeForm=document.getElementById('closeBtn1')
 //   closeForm.addEventListener("click",unShow)
-  
+
 //   function unShow(event){
 //     event.preventDefault();
 //     closeForm.querySelector(".popUpForm").style.display="none"

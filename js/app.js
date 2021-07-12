@@ -27,7 +27,6 @@ function render() {
 
     imgContainer.appendChild(imgEl);
   }
-  
 }
 render();
 
