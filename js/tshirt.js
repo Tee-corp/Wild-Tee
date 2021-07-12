@@ -34,7 +34,7 @@ for (let i = 2; i < 15; i++) {
 }
 let girlImgs=[];
 for (let i = 1; i < 12; i++) {
-  girlImgs.push(`${i}.png`);
+  girlImgs.push(`${i}.jpg`);
 }
 
 
