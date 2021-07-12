@@ -38,7 +38,7 @@ for (let i = 0; i < tshirt.design.length; i++) {
    aEl =document.createElement('a');
   aEl.setAttribute('id',`${i}`)
   aEl.innerHTML='<i class="far fa-trash-alt"></i>';
-  aEl.addEventListener('click', removeItemFromCart);
+  design[i].addEventListener('click', removeItemFromCart);
   tdEl.appendChild(aEl);
   trEl.appendChild(tdEl);
   let tdEl1 = document.createElement('td');
