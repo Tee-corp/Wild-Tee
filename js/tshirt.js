@@ -1,17 +1,21 @@
 'use strict';
-let imgContainerEl = document.getElementById("closet");
+let imgContainerEl = document.getElementById("shirt-card");
 let changeColorContainer =document.getElementById('changeColor');
-// let iconPlace = document.getElementById("shirrt");
+let changeColorContainerGirl = document.getElementById('changeColorGirl');
 let iconsContenierEl=document.getElementById("icons")
-let icons=["ballon.png", "bekind.png", "pizza.png", "ltcu.jpg", 'grunge.png', 'Etcher.png','logo.jpg','a123 .png','facebook-like.png','pizza-slices.png','taco.png','cat.png']; 
+
+let icons=["ballon.png", "bekind.png", "pizza.png", 'grunge.png', 'Etcher.png',  'a123 .png', 'pizza-slices.png', 'cat.png','money-bag.png','accident.png']; 
 let  iconImg;
 let  newIcon;
 let tsColorInLlocal ;
 
-let abd= ['Black.png'];
-tsColorInLlocal = JSON.stringify(abd[0]);
+let tsColor=['Black.png','Gray.png','Blue.png','Orange.png','Yellow.png','Megenta.png','Sea-Green.png','Mid-Night-Blue.png','Sonar-Green.png','white.png','Fever-Red.png','Rioja-Red.png','Mint-Green.png'];
+tsColorInLlocal = JSON.stringify(tsColor[0]);
   localStorage.setItem("tsColor", tsColorInLlocal);
 
+  let tsColorGirl=["White-girl.png","Black-girl.png",'Venus-Violet-gitl.png','Beryl-Green-girl.png','Wolf-Grey-girl.png','Turquoise-girl.png','MediumSea-Green-girl.png','Pearl-Grey-girl.png','Ultraviolet-girl.png','Pale-Violetred-girl.png','Light-Red-girl.png']
+
+  
 function placeIcon() {
  iconImg = JSON.parse(localStorage.getItem('clickedicon')) || [];
      newIcon = document.createElement("img");
@@ -20,54 +24,69 @@ function placeIcon() {
 
     imgContainerEl.appendChild(newIcon);
   }
-  
 placeIcon();
+
+
 let imgs=[];
-let tsColor=['Black.png','Gray.png','Blue.png','Orange.png','Yellow.png','Megenta.png','Sea-Green.png','Mid-Night-Blue.png','Sonar-Green.png','white.png','Fever-Red.png','Rioja-Red.png','Mint-Green.png'];
 for (let i = 2; i < 15; i++) {
   imgs.push(`${i}a.jpg`);
 }
-// console.log(tsColor);
-let imgEl2;
+let girlImgs=[];
+for (let i = 1; i < 12; i++) {
+  girlImgs.push(`${i}.png`);
+}
 
+
+let imgEl2;
 function render(lengTh,imgFile,contenerName,changeClass,imgPath) {
   for (let i = 0; i < lengTh; i++) {
-    // liEl = document.createElement("li");
     imgEl2 = document.createElement("img");
     imgEl2.setAttribute("src", imgPath + imgFile[i]);
     imgEl2.setAttribute("class",changeClass );
     imgEl2.setAttribute("width", "40px");
     imgEl2.setAttribute("id", i);
-    // liEl.appendChild(imgEl);
     contenerName.appendChild(imgEl2);
-    
   }
 }
 
-render(imgs.length,imgs,changeColorContainer,'circle',"images/ManColor/");/* color box*/
-render(icons.length,icons,iconsContenierEl,'icons',"images/icon/");/*man's tshirt */
-// render(imgs.length,imgs,changeColorContainer,'circle');/* color box*/
+render(imgs.length,imgs,changeColorContainer,'circle',"images/ManColor/");/* color box for man */
+render(icons.length,icons,iconsContenierEl,'icons',"images/icon/");/*change icon  */
+render(girlImgs.length,girlImgs,changeColorContainerGirl,'circleGirl',"images/girl/");/* color box for girl */
 
 let  imgTsEl;
 changeColorContainer.addEventListener("click", changeColor);
 
 function changeColor (event){
-  
   let ColorIndex = event.target.id ;
   imgContainerEl.textContent='';
   imgTsEl = document.createElement("img");
   imgTsEl.setAttribute('class','shirrt')
   imgTsEl.setAttribute("src", "images/tshirt/"+tsColor[ColorIndex]);
   imgContainerEl.appendChild(imgTsEl);
-
   tsColorInLlocal = JSON.stringify(tsColor[ColorIndex]);
   localStorage.setItem("tsColor", tsColorInLlocal);
 
   placeIcon();
 }
 
-iconsContenierEl.addEventListener("click",  changIcon);
 
+changeColorContainerGirl.addEventListener("click", changeColorGirl);
+
+function changeColorGirl (event){
+  let ColorIndex = event.target.id ;
+  imgContainerEl.textContent='';
+  imgTsEl = document.createElement("img");
+  imgTsEl.setAttribute('class','shirrt')
+  imgTsEl.setAttribute("src", "images/GirlsTshirt/"+tsColorGirl[ColorIndex]);
+  imgContainerEl.appendChild(imgTsEl);
+  tsColorInLlocal = JSON.stringify(tsColorGirl[ColorIndex]);
+  localStorage.setItem("tsColor", tsColorInLlocal);
+
+  placeIcon();
+}
+
+
+iconsContenierEl.addEventListener("click",  changIcon);
 function changIcon(event){
   let clickedicon= JSON.stringify(icons[event.target.id]);
   localStorage.setItem("clickedicon", clickedicon);
