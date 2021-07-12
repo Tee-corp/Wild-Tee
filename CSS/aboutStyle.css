@@ -1,0 +1,285 @@
+
+
+/* body{
+ background-color:#DAF7A6 ;
+
+
+
+}
+
+header{
+
+background-image: url(/images/b1.jpg);
+height: 70%;
+--bg-overlay-color: rgb(36, 35, 35);
+    --fill-layer-image-opacity: 0.56;
+    --fill-layer-background-media-position: fixed;
+    --fill-layer-background-media-pointer-events: none;
+    width: 100%;
+    --column-width: 980px;
+    --column-flex: 980px;
+}
+     */
+
+
+
+*{
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'montserrat' , sans-serif ;
+
+
+}
+ 
+body{
+
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-color: #EEC944;
+border: 5px  black ;
+}
+
+
+#ParA{
+
+
+    font-size:28px;
+    color:black;
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+position: relative;
+width: 1500px;
+display: flex;
+flex-wrap: wrap;
+}
+ 
+.container .box 
+{
+    position: relative;
+width: 350px;
+height: 500px;
+overflow:hidden;
+transition: 0.5s;
+}
+
+.container .box:hover{
+z-index: 1;
+transform: scale(1.25);
+box-shadow: 0 25px 40px rgba(0,0,0,.5);
+
+
+}
+ 
+/* ************************************************************************************************ */
+
+.container .box .imGbx:before{
+
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+background:linear-gradient(180deg , #f00,#000);
+mix-blend-mode: multiply;
+opacity: 0;
+transform: 0.5s ;
+}
+ 
+.container .box:hover .imGbx:before{
+
+opacity: 1;
+
+}
+
+.container .box .cnotentBox {
+
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 2;
+display: flex;
+padding: 20px;
+align-items: flex-end;
+
+}
+
+
+.container .box .cnotentBox h2
+{
+color:#fff;
+transition: 0.5s;
+text-transform: uppercase;
+margin-bottom: 5px;
+font-size: 20px;
+transform: translateY(200px);
+
+
+
+}
+
+
+
+/* ************************************************************************************************************* */
+
+
+.container .box:hover .cnotentBox h2
+{
+
+
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+
+
+.container .box .cnotentBox p
+{
+
+color: #fff;
+transform: translateY(200px);
+transition: 0.5s;
+font-size: 14px;
+    
+}
+
+
+.container .box .cnotentBox p
+{
+    transform: translateY(0);
+    transition-delay: 0.7s;
+}
+ 
+.container .box .imGbx img {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    }
+    
+
+
+
+
+    /* *************************************************************************titleunderMe********* */
+    /* .container .box .imGbx img {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+        } */
+
+
+ 
+ 
+ 
+ .title{
+
+    height: 20vh;
+    font-family: 'Otomanopee One', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+         }
+
+
+
+/* ******************************************************************************************************** */
+
+
+/* body{
+ background-color:#DAF7A6 ;
+
+
+
+}
+
+header{
+
+background-image: url(/images/b1.jpg);
+height: 70%;
+--bg-overlay-color: rgb(36, 35, 35);
+    --fill-layer-image-opacity: 0.56;
+    --fill-layer-background-media-position: fixed;
+    --fill-layer-background-media-pointer-events: none;
+    width: 100%;
+    --column-width: 980px;
+    --column-flex: 980px;
+}
+     */
+
+    
+
+ .imGFS-Contain{
+
+height: 400px;
+width: 550px;
+border: 5px solid black;
+margin-right: 10px;
+position: relative;
+
+     }
+.imGFF{
+display: flex;
+
+justify-content: space-around;
+
+}
+
+.imGFS-Contain img{
+width: 100%;
+height: 100%;
+
+     }
+
+     .trans-img1{
+position: absolute;
+top: 0px;
+left: 0px;
+opacity: 0;
+transition: opacity 0.5s ease ;
+}
+     
+ .trans-img1:hover{
+        opacity: 1;}
+
+
+.fade::after{
+content: "TEE-CORP the best choice at all time ..";
+color: white;
+display: flex;
+justify-content:center ;
+align-items: center;
+font-size: 40px;
+background-color: black;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+transition: opacity 0.5s ease ;
+
+}
+
+.fade:hover::after{
+
+    opacity: 0.5;
+} 
