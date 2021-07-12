@@ -4,7 +4,8 @@ let changeColorContainer =document.getElementById('changeColor');
 let changeColorContainerGirl = document.getElementById('changeColorGirl');
 let iconsContenierEl=document.getElementById("icons")
 
-let icons=["ballon.png", "bekind.png", "pizza.png", 'grunge.png', 'Etcher.png',  'a123 .png', 'pizza-slices.png', 'cat.png','money-bag.png','accident.png']; 
+let icons=['cat.png', 'pizza-slices.png', 'money-bag.png','accident.png',"dolphin.png",'ostrich.png','penguin.png','cheetah.png','butterfly.png',"ballon.png", "bekind.png", "pizza.png", 'grunge.png', 'Etcher.png',  'a123 .png','hamster.png','bird.png','mushroom.png','Red-Mushroom.png','jordan.png','palestine.png','syria.png','sun.png','dahlia.png','sunflower.png','motorcycle.png',"nope.png",'sword.png',"wounded.png","wreath.png"];
+
 let  iconImg;
 let  newIcon;
 let tsColorInLlocal ;
@@ -15,7 +16,7 @@ tsColorInLlocal = JSON.stringify(tsColor[0]);
 
   let tsColorGirl=["White-girl.png","Black-girl.png",'Venus-Violet-gitl.png','Beryl-Green-girl.png','Wolf-Grey-girl.png','Turquoise-girl.png','MediumSea-Green-girl.png','Pearl-Grey-girl.png','Ultraviolet-girl.png','Pale-Violetred-girl.png','Light-Red-girl.png']
 
-  
+
 function placeIcon() {
  iconImg = JSON.parse(localStorage.getItem('clickedicon')) || [];
      newIcon = document.createElement("img");
