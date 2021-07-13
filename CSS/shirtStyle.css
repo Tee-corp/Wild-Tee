@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
 * {
   box-sizing: border-box;
@@ -13,55 +15,67 @@ html {
   align-items: center;
   flex-wrap: nowrap;
   width: 100%;
-  height: 70px;
-  position: sticky;
+  height: 100px;
+  /* position: sticky;
   top: 0%;
-  z-index: 1;
-  background-color: #EDEDED;
-  box-shadow: 0px 2px 5px #00000071;
+  z-index: 1; */
+  background-color: #CDF0EA;
+  margin-top: 1rem;
+  /* border: solid tomato; */
 }
 
 #fixed-nav {
   /* border: solid tomato; */
   width: 80%;
-  height: 70px;
-  margin: 0 auto;
+  height: 85px;
+  margin: 0rem auto;
 }
 
-#fixed-nav span {
+#fixed-nav #logo-font {
   display: inline-block;
-  font-family: "Quicksand", sans-serif;
-  color: #046582;
-  font-size: 3pc;
+  font-family: 'Dela Gothic One', cursive;
+  color: rgba(182, 20, 33, 0.87);
+  font-size: 1.3pc;
   font-weight: bold;
-  /* border: solid tomato; */
-
+  border: solid rgba(182, 20, 33, 0.87);
+  border-width: 6px;
+  padding: 0.5rem;
   margin-top: 0.5rem;
+  text-align: center;
+  user-select: none;
 }
 
 #icon-bar {
-  margin-right: 0rem;
-  margin-top: 1rem;
+  /* margin-left: 1rem; */
+  margin-top: 1.5rem;
   float: right;
   /* border: solid tomato; */
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  
 }
 
 #icon-bar a {
   text-decoration: none;
   margin-right: 2rem;
+  user-select: none;
   font-size: 1.5pc;
   /* border: solid tomato; */
-  color: #046582;
+  font-family: 'Dela Gothic One', cursive;
+ color: black;
   transition: 0.2s;
 }
 
 #icon-bar a:hover {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
-
+#divider {
+  width: 100%;
+  margin-top: 2rem;
+  border-width: 1px;
+  opacity: 0.5;
+}
 
 
 
@@ -84,26 +98,31 @@ main {
   width: 80%;
   margin: 3rem auto;
   /* border: solid tomato; */
+  height: 550px;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 #closet {
   /* border: solid tomato; */
-  height: 650px;
+  height: 550px;
   position: relative;
   display: flex;
   justify-content: space-between;
-
+float: right;
   width: 100%;
   border-radius: 5px;
-  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.432);
+  /* box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.432); */
 }
 
 .shirrt {
   /* border: solid tomato; */
   width: 500px;
   height: 550px;
-  margin-top: 5rem;
-  margin-left: 2rem;
+  margin-top: 1rem;
+  margin-left: 22rem;
+  
   position: relative;
   border-radius: 5px;
   /* box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.432); */
@@ -115,8 +134,8 @@ main {
   /* display: inline-block; */
   width: 140px;
   height: 110px;
-  top: 13rem;
-  left: 13rem;
+  top: 9rem;
+  left: 33rem;
 }
 
 #changeColor {
@@ -124,27 +143,65 @@ main {
   height: 65px;
   position: absolute;
   top: 9rem;
-  right: 10rem;
+  right: 2rem;
   /* border: solid tomato; */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.349);
+  border-radius: 5px;
 }
 
 #changeColor .circle {
   border: black solid;
-
+border-style: none;
   border-width: 1px;
-  border-radius: 100px;
+  border-radius: 5px;
   padding: 1px;
   margin: 2px;
-  width: 37px;
+  width: 22px;
   height: 22px;
   /* border: solid tomato;  */
   /* z-index:1;
     position: relative; */
+   
 }
+
+
+#changeColorGirl {
+/* border: solid tomato;  */
+height: fit-content;
+position: absolute;
+right: 2rem;
+top: 4rem;
+width: 300px;
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.349);
+border-radius: 5px;
+}
+
+.circleGirl {
+width: 22px;
+height: 22px;
+  border-radius: 5px ; 
+  padding: 1px;
+  padding: 1px;
+  margin: 2px;
+}
+
+
+
+
+
 .circle:hover {
   transform: scale(110%);
   transition: 0.2s;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.349);
 }
+
+.circleGirl:hover {
+  transform: scale(110%);
+  transition: 0.2s;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.349);
+}
+
+
 #submit {
 }
 
@@ -162,12 +219,21 @@ display: inline-block;
 
 #icons {
   position: absolute;
-  bottom: 9rem;
-  right: 4rem;
+  top: 3rem;
+  left: 2rem;
   /* border: solid tomato; */
+  width: 300px;
+  text-align: center;
+  height: 350px;
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.432);
+  border-radius: 5px;
+overflow: auto;
+padding: 0.5rem;
 }
+
+
 #icons img {
-  box-shadow: rgb(100, 100, 97) 0px 3px 3px;
+  /* box-shadow: rgb(100, 100, 97) 0px 3px 3px; */
 
   border-radius: 10px;
   padding: 1px;
@@ -184,8 +250,8 @@ display: inline-block;
 #catalog {
   /* border: solid tomato; */
  position: absolute;
- bottom: 20rem;
-  right: 10rem;
+ bottom: 5rem;
+  right: 2rem;
   height: 50px;
 }
 
@@ -193,8 +259,102 @@ display: inline-block;
 #proc {
   position: absolute;
   bottom: 2rem;
-   right: 15rem;
-   
+   right: 6rem;
+   text-decoration: none;
+   font-size: 1.1pc;
+   color: rgba(182, 20, 33, 0.87);
 
+transition: 0.2s;
+}
+
+
+#proc:hover {
+
+  border-bottom: 4px solid rgba(182, 20, 33, 0.87);
+
+}
+
+
+
+
+
+
+footer {
+  width: 100%;
+  height: 400px;
+  background-color: #CDF0EA;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  margin-top: 5rem;
+  text-align: center;
+  /* color: white; */
+  font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+font-size: 1.3pc;
+}
+
+#logo-foot {
+  position: absolute;
+  display: inline-block;
+  font-family: 'Dela Gothic One', cursive;
+  color: rgba(182, 20, 33, 0.87);
+  font-size: 3pc;
+  font-weight: bold;
+  border: solid rgba(182, 20, 33, 0.87);
+  border-width: 15px;
+  padding: 0.5rem;
+ top: 2rem;
+ left: 20rem;
+  /* text-align: center; */
+  user-select: none;
+}
+
+
+
+#first-set {
+position: absolute;
+top: 2rem;
+ right:20rem;
+ text-align: left;
+ 
+}
+
+#secound-set {
+
+  position: absolute;
+  top: 2rem;
+   right:50rem;
+   text-align: left;
+
+}
+li a {
+  /* text-decoration: black; */
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+}
+
+li a:hover {
+  
+  border-bottom: 4px solid rgba(182, 20, 33, 0.87);
+}
+
+
+
+
+footer #rights {
+
+  position: absolute;
+  bottom: 0.5rem;
+   /* left:0rem; */
+   right: 28rem;
+   background-color:#CDF0EA ;
+   height: 30px;
+}
+
+.idk {
+font-size: 1pc;
+font-family: 'Dela Gothic One', cursive;
 
 }

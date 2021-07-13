@@ -45,3 +45,43 @@ function gotoShirtPage() {
 
 
 
+const observer = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+    if (entry.isIntersecting) {
+      // Add the animation class
+      entry.target.classList.add('L1-anime');
+    }
+  });
+});
+
+observer.observe(document.querySelector('.anowrap'));
+
+
+const observer1 = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+    if (entry.isIntersecting) {
+      // Add the animation class
+      entry.target.classList.add('L2-anime');
+    }
+  });
+});
+
+observer1.observe(document.querySelector('.modwrap'));
+
+
+const observer2 = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+    if (entry.isIntersecting) {
+      // Add the animation class
+      entry.target.classList.add('L3-anime');
+    }
+  });
+});
+
+observer2.observe(document.querySelector('.decwrap'));
