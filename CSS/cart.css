@@ -57,7 +57,7 @@
     transition: 0.2s;
   }
   #icon-bar a:hover {
-    opacity: 0.7;
+    border-bottom: 4px solid rgba(182, 20, 33, 0.87);
   }
   #divider {
     width: 100%;
@@ -84,8 +84,8 @@ width:80%;
 
 .decContaner{
     width: 100%;
-    height: 400px;
-    margin: 15% auto;
+    height: 550px;
+    margin: 3rem auto;
     /* border: 1px solid #57837B; */
     border-radius: 5px;
     /* border-color: #334257; */
@@ -95,13 +95,13 @@ width:80%;
     /* background-color: #FFEACA; */
 }
 .decContaner::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
     height: 0;
     
   }
   .decContaner::-webkit-scrollbar-thumb {
-    background: rgb(2, 2, 2); 
-    border-radius: 10px;
+    background: rgba(182, 20, 33, 0.87); 
+    
     
   }
   .decContaner::-webkit-scrollbar-track {
@@ -109,30 +109,61 @@ width:80%;
     border-radius: 10px;
     
   }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(182, 20, 33, 0.87); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+
+  i[class="far fa-trash-alt"] {
+color:rgba(182, 20, 33, 0.87) ; 
+font-size: 1.3pc;
+}
+  
   /* .decContaner::-webkit-scrollbar{
       width: 5px;
   } */
 
 #closeBtn1{
-    color: tomato;
+    color: rgba(182, 20, 33, 0.87);
 }
 table{
     width: 100%;
 }
 
-/* tbody td{
-    position: relative;
-    top: 43%;    
-    text-align: left;
-    
-} */
+
+
+img {
+width: 70px;
+height: 70px;
+
+}
+
 
 #cart thead tr th {
     color: rgb(20, 18, 18);
     /* border-bottom: 3px solid #062f4f; */
-    font-weight: bold;
+    /* font-weight: bold; */
     /* border: solid tomato; */
     padding: 0.5em;
+    font-family: 'Dela Gothic One', cursive;
   }
 
   #cart tbody tr td {
@@ -149,7 +180,7 @@ form{width:340px;
     height:440px;
     background:#e6e6e6;
     border-radius:8px;
-    box-shadow:0 0 40px -10px #000;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.486);
     margin:calc(50vh - 220px) auto;
     padding:20px 30px;
     max-width:calc(100vw - 40px);
@@ -159,7 +190,7 @@ form{width:340px;
     /* hr */
     #comaHr{
         width: 85%;
-        margin-top: 17rem;
+        margin-top: 2rem;
     }
 
     /* hr */
@@ -169,32 +200,41 @@ form{width:340px;
     left: 0;
     right: 0;
     margin:0 auto;
-    background-color: violet;
-         color: black;
+    background-color: rgba(182, 20, 33, 0.87);
+       font-size: 1.1pc;
       font-weight: bolder;
       border-radius: 5px;
-      box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.486);
       text-decoration: none;
-      transform: 0.4s;
+      transition: 0.2s;
+      padding: 1rem;
+      color: white;
+      border-style: none;
+      cursor: pointer;
   }
-  #btnCont{
-      width: 100%;
-      height: fit-content;
-      /* border: 2px solid tomato; */
-      margin: 2rem;
-      position: relative;
+  
+
+  .openButton:hover {
+
+    transform: scale(110%);
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.486);
   }
+
+  .openButton:active {
+
+    transform: scale(100%);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.486);
+  }
+
+
   /* stop here with emam */
-  .button:hover{
-    background-color: blueviolet;
-    color: burlywood;
-  }
+  
   
   .popUpForm{
       /* background-color: cornsilk; */
      position: absolute;
      width: 100%;
-     height: 850px;
+     height: 175%;
      /* bottom: 0; */
       top: 0;
       left: 0;
@@ -205,12 +245,14 @@ form{width:340px;
       z-index: 1;
       margin-top: -13px;
       backdrop-filter: blur(6px);
+      font-family: 'Montserrat', sans-serif;
       
           }
   /* label input{
     
   } */
   #payForm{
+    font-family: 'Montserrat', sans-serif;
     height: 280px;
     width: fit-content;
     background-color: white;
@@ -224,12 +266,13 @@ form{width:340px;
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         
   }
-  /* fieldset{
   
-    margin-top: 33px;
-    margin-left: 30px; */
-    /* padding-top: 20%; */
-  /* } */
+label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 0.9pc;
+}
+
   #closeBtn1{
     /* background-color: darkcyan; */
     position:absolute;
@@ -264,17 +307,25 @@ form{width:340px;
   } */
   
   #btnFin{
-    background-color:black;
+    background-color:rgba(182, 20, 33, 0.87);
     border-style: none;
       border-radius:5px;
       display:inline-block;
       color:#ffffff;
       font-size:17px;
-      padding:17px 40px;
-    height: 51px;
-      margin-top: 1%;
+      padding: 1rem;
+    
       text-decoration:none;
       text-shadow:0px 1px 0px #ebe7e7;
+  }
+
+
+  #total {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.7pc;
+    
+
   }
   
   /* nav */

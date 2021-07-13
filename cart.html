@@ -2,11 +2,12 @@
 <html>
 
 <head>
-  <title> Store</title>
+  <title>WILDTEE - Cart</title>
   <link rel="stylesheet" href="CSS/reset.css">
   <!-- <link rel="stylesheet" href="CSS/style.css"> -->
   <link rel="stylesheet" href="CSS/cart.css">
   <script src="https://kit.fontawesome.com/eac52206dc.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/14/14535.png" type="image/x-icon">
 </head>
 
 <body>
@@ -23,7 +24,50 @@
         </nav>
       </div>
 
+      <hr id="divider">
+
   <main>
+
+
+
+    <div class="popUpForm">
+      <form action="" id="payForm" class="pop2">
+
+        <fieldset>
+
+          <!-- <a href="cart.html" class="closeBtn" id="closeBtn1"> -->
+            <span class="closPoUp" id="closeBtn1" > <i  class="fas fa-times"></i></span>
+          <!-- <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39219/preview.png" class="close" id="closeBtn1" alt=""> -->
+          
+            <label for="">User Name
+              <input type="text"  class="divChe" name="formUser" id="input1"></label>
+          <br>
+
+          <label for="" >Address
+          <input id="checkFo" type = "text" class="divChe" name="check" ></label>
+          <!-- <input type="checkbox"  value="aramix" name="check"> -->
+          <br>
+          <label for="">Phone number  <input type="text" class="divChe" name="check"></label>
+<br>
+<label for="">Email Address  <input type="text" class="divChe" ></label>   
+<br>
+          <!-- <label for="" id="label1">Card Number</label> -->
+                    <label for=""  id="selectEl" name="label">Payment</label>
+              <select class="divChe" name="cardPay" id="selectEl">
+               <option value="cashPay">cash</option>
+              <option value="visaCa">visa</option>
+                <option value="maPAy">master card</option>
+             
+             
+              </select>
+            <!-- </div> -->
+            <!-- <input type="text" placeholder="MM/yy" name="form" id="input2"> -->
+         <br>
+
+          <button type="submit" id="btnFin">FINISH</button>
+          </div>
+
+
 
     <section class="deck col-1">
       <div class="card">
@@ -58,51 +102,19 @@
           </tbody>
         </table>
       <!-- </div> -->
-      <hr id="comaHr">
-      <div id="btnCont"><button class="openButton" id="openBtn">Open Form</button>
+      
     </div>
        
     </section>
     <!-- ************************************************************************************************** -->
+
+
+    <hr id="comaHr">
+      <div id="btnCont"><button class="openButton" id="openBtn">Payment</button>
     <section>
 
        
-        <div class="popUpForm">
-          <form action="" id="payForm" class="pop2">
-  
-            <fieldset>
-  
-              <!-- <a href="cart.html" class="closeBtn" id="closeBtn1"> -->
-                <span class="closPoUp" id="closeBtn1" > <i  class="fas fa-times"></i></span>
-              <!-- <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39219/preview.png" class="close" id="closeBtn1" alt=""> -->
-              
-                <label for="">User Name
-                  <input type="text" placeholder="user name" class="divChe" name="formUser" id="input1"></label>
-              <br>
-  
-              <label for="" >Address
-              <input id="checkFo" type = "text" class="divChe" name="check" value="0"></label>
-              <!-- <input type="checkbox"  value="aramix" name="check"> -->
-              <br>
-              <label for="">Phone number  <input type="text" class="divChe" name="check"></label>
-  <br>
-    <label for="">Email Address  <input type="text" class="divChe" ></label>   
-    <br>
-              <!-- <label for="" id="label1">Card Number</label> -->
-                        <label for=""  id="selectEl" name="label">Payment</label>
-                  <select class="divChe" name="cardPay" id="selectEl">
-                   <option value="cashPay">cash</option>
-                  <option value="visaCa">visa</option>
-                    <option value="maPAy">master card</option>
-                 
-                 
-                  </select>
-                <!-- </div> -->
-                <!-- <input type="text" placeholder="MM/yy" name="form" id="input2"> -->
-             <br>
-  
-              <button type="submit" id="btnFin">FINISH</button>
-              </div>
+       
               
   
               
