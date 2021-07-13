@@ -34,10 +34,10 @@ font-family: 'montserrat' , sans-serif ;
 }
  
 body{
-
 display: flex;
 justify-content: center;
 align-items: center;
+text-align: center;
 min-height: 100vh;
 background-color:aliceblue;
 border: 5px  black ;
