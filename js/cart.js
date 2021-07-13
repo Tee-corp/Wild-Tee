@@ -110,8 +110,8 @@ function saveToLocalStorage() {
 renderCart();
 // ****************************************************************************************
 let numOfItemInCart = JSON.parse(localStorage.getItem('numOfItemInCart')) || [];
-// let cartNavEl = document.getElementById("ss");
-// cartNavEl.textContent=`${numOfItemInCart}`;
+let cartNavEl = document.getElementById("ss");
+cartNavEl.textContent=`${numOfItemInCart}`;
 
 function deleteFromCounter() {
 
@@ -123,7 +123,7 @@ if (numOfItemInCart==0){
   let numOfItemInCartInLocal = JSON.stringify(numOfItemInCart);
   localStorage.setItem('numOfItemInCart', numOfItemInCartInLocal);
 
-  // cartNavEl.textContent=`${numOfItemInCart}`;
+  cartNavEl.textContent=`${numOfItemInCart}`;
 }
 
 
