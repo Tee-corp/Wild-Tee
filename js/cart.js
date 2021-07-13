@@ -3,7 +3,7 @@
 let table = document.getElementById('cart');
 let tbodyEl = document.getElementById('body');
 table.appendChild(tbodyEl);
-table.addEventListener('click', removeItemFromCart);
+
 
 let tshirt = {
   design: [],
@@ -14,7 +14,6 @@ function loadCart() {
   tshirt.design = tShirtItems;
 }
 
-//   console.log(tshirt);
 
 
 function renderCart() {
@@ -32,7 +31,7 @@ function clearCart() {
 let trEl;
 let tdEl;
 let aEl;
-
+let sumOfQuantity = 0;
 
 function showCart() {
 
@@ -41,6 +40,7 @@ function showCart() {
     tdEl = document.createElement('td');
     aEl = document.createElement('a');
     aEl.innerHTML = `<i id='${i}' class="far fa-trash-alt"></i>`;
+    tdEl.addEventListener('click', removeItemFromCart);
     tdEl.appendChild(aEl);
     trEl.appendChild(tdEl);
     let tdEl1 = document.createElement('td');
@@ -57,14 +57,29 @@ function showCart() {
     img.setAttribute('height', '40px');
     tdEl4.appendChild(img);
     // *******************************************************************
+     let tdEl5 = document.createElement("td");
+     let img2 = document.createElement("img");
+     img2.setAttribute("src", "images/tshirt/"+tshirt.design[i].tsColor);
+     img2.setAttribute("width", "60px");
+     img2.setAttribute("height", "60px");
+     tdEl5.appendChild(img2);
+     trEl.appendChild(tdEl5);
+     // ********************************************************************
     trEl.appendChild(tdEl4);
     let tdEl3 = document.createElement('td');
     tdEl3.textContent = `${tshirt.design[i].tsColor.split('.')[0]}`;
     trEl.appendChild(tdEl3);
+    // *************************************************************************
+    let tdEl6 = document.createElement("td");
+    
+    tdEl6.innerHTML = `10 <i class="fas fa-dollar-sign"></i>`;
+    trEl.appendChild(tdEl6);
+    // *******************************************************************************
     tbodyEl.appendChild(trEl);
-
+    sumOfQuantity=sumOfQuantity+Number( tshirt.design[i].quantity);
   }
-
+  let totalOfCartEl=document.getElementById('total');
+  totalOfCartEl.textContent=` Total price: ${sumOfQuantity*10}$`;
 }
 
 
@@ -72,6 +87,8 @@ function showCart() {
 function removeItemFromCart(event) {
 
   event.preventDefault();
+  deleteFromCounter();
+  sumOfQuantity = 0;
   removeItem(event);
   saveToLocalStorage();
   renderCart();
@@ -91,6 +108,23 @@ function saveToLocalStorage() {
 }
 
 renderCart();
+// ****************************************************************************************
+let numOfItemInCart = JSON.parse(localStorage.getItem('numOfItemInCart')) || [];
+// let cartNavEl = document.getElementById("ss");
+// cartNavEl.textContent=`${numOfItemInCart}`;
+
+function deleteFromCounter() {
+
+  numOfItemInCart[0]--;
+if (numOfItemInCart==0){
+  numOfItemInCart='';
+
+}
+  let numOfItemInCartInLocal = JSON.stringify(numOfItemInCart);
+  localStorage.setItem('numOfItemInCart', numOfItemInCartInLocal);
+
+  // cartNavEl.textContent=`${numOfItemInCart}`;
+}
 
 
 // ******************************************************************************************
@@ -126,47 +160,47 @@ function deletTableRow(event){
 }
 
 // move from page to another
-let googleBut=document.getElementById('gog');
-let faceboBut=document.getElementById('fac');
-let TshirtBtn=document.getElementById('ShirtPage');
+// let googleBut=document.getElementById('gog');
+// let faceboBut=document.getElementById('fac');
+// let TshirtBtn=document.getElementById('ShirtPage');
 
-googleBut.addEventListener('click',goGoogl);
-faceboBut.addEventListener('click',goFace);
-TshirtBtn.addEventListener('click',goTshirt);
+// googleBut.addEventListener('click',goGoogl);
+// // faceboBut.addEventListener('click',goFace);
+// TshirtBtn.addEventListener('click',goTshirt);
 
-function goGoogl(event){
-  event.preventDefault();
-  window.location.href='https://accounts.google.com/signin/v2/identifier?service=mail&lp=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin';
-}
+// function goGoogl(event){
+//   event.preventDefault();
+//   window.location.href='https://accounts.google.com/signin/v2/identifier?service=mail&lp=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin';
+// }
 
-function goFace(event){
-  event.preventDefault();
-  window.location.href='https://web.facebook.com/?_rdc=1&_rdr';
-}
+// function goFace(event){
+//   event.preventDefault();
+//   window.location.href='https://web.facebook.com/?_rdc=1&_rdr';
+// }
 
 
-function goTshirt(event){
-  event.preventDefault();
-  window.location.href='shirt.html';
-}
+// function goTshirt(event){
+//   event.preventDefault();
+//   window.location.href='shirt.html';
+// }
 // ////////////////image conatiner////////////////////
 
-let myIndex = 0;
-carousel();
+// let myIndex = 0;
+// carousel();
 
-function carousel() {
-  let i;
-  let x = document.getElementsByClassName('mySlides');
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = 'none';
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1;}
-  x[myIndex-1].style.display = 'block';
-  setTimeout(carousel, 1000);
-  // Change image every 1 seconds
+// function carousel() {
+//   let i;
+//   let x = document.getElementsByClassName('mySlides');
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = 'none';
+//   }
+//   myIndex++;
+//   if (myIndex > x.length) {myIndex = 1;}
+//   x[myIndex-1].style.display = 'block';
+//   setTimeout(carousel, 1000);
+//   // Change image every 1 seconds
 
-}
+// }
 // let closeForm=document.getElementById('closeBtn1')
 //   closeForm.addEventListener("click",unShow)
 

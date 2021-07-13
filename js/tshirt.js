@@ -120,15 +120,34 @@ const NewTshirtItem = function(tsColor,icon, quantity) {
   this.quantity=quantity;
 };
 
+
+
+// **********************************************************************
+
+let numOfItemInCart = JSON.parse(localStorage.getItem('numOfItemInCart')) || [''];
+let cartNavEl = document.getElementById("ss");
+cartNavEl.textContent=`${numOfItemInCart}`;
+
+function addToCounter() {
+
+  numOfItemInCart[0]++;
+
+  let numOfItemInCartInLocal = JSON.stringify(numOfItemInCart);
+  localStorage.setItem('numOfItemInCart', numOfItemInCartInLocal);
+
+  cartNavEl.textContent=`${numOfItemInCart}`;
+}
+
+// **********************************************************************
 let formEl=document.getElementById('catalog');
 formEl.addEventListener('submit',  addTshirtToCart);
 
-  
 function addTshirtToCart (event){
 event.preventDefault();
 let quantity=event.target.quantity.value ;
 tsColorInLlocal = JSON.parse(localStorage.getItem('tsColor')) || [];
 tshirt.addTshirt(tsColorInLlocal,iconImg,quantity);
+addToCounter();
 saveToLocalStorage();
 
 }
