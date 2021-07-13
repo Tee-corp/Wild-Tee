@@ -1,56 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 *{
     box-sizing: border-box;
 }
+/* navHeader */
 
-body{
-    width:100%;
-    height: 100%;
-    margin-left: 25%;
-    margin-right: 25%;
-}
+#FV {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100px;
+    /* position: sticky;
+    top: 0%;
+    z-index: 1; */
+    background-color: #CDF0EA;
+    margin-top: 1rem;
+    /* border: solid tomato; */
+  }
+  #fixed-nav {
+    /* border: solid tomato; */
+    width: 80%;
+    height: 85px;
+    margin: 0rem auto;
+  }
+  #fixed-nav #logo-font {
+    display: inline-block;
+    font-family: 'Dela Gothic One', cursive;
+    color: rgba(182, 20, 33, 0.87);
+    font-size: 1.3pc;
+    font-weight: bold;
+    border: solid rgba(182, 20, 33, 0.87);
+    border-width: 6px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    user-select: none;
+  }
+  #icon-bar {
+    /* margin-left: 1rem; */
+    margin-top: 1.5rem;
+    float: right;
+    /* border: solid tomato; */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  #icon-bar a {
+    text-decoration: none;
+    margin-right: 2rem;
+    user-select: none;
+    font-size: 1.5pc;
+    /* border: solid tomato; */
+    font-family: 'Dela Gothic One', cursive;
+   color: black;
+    transition: 0.2s;
+  }
+  #icon-bar a:hover {
+    opacity: 0.7;
+  }
+  #divider {
+    width: 100%;
+    margin-top: 2rem;
+    border-width: 1px;
+    opacity: 0.5;
+  }
 
+
+
+/* navHeader */
 main{
-margin-top: 15%;
-   
-    border: 2px black;
+width:80%;
+   /* border: solid tomato; */
+   margin: 0 auto;
 }
+/* font change */
 #cart{
-    width:55%;
-   margin-left: 17%;
-    height: 55%;
-   
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   margin: 0 auto;
+   width: 100%;
+   border-collapse: collapse;
 }
 
 .decContaner{
-    width: 45%;
-    border: 1px solid #57837B;
-    border-radius: 30px;
-    border-color: #334257;
-    box-shadow: 5px 6px 5px 6px #aaa5a5;
+    width: 100%;
+    height: 400px;
+    margin: 15% auto;
+    /* border: 1px solid #57837B; */
+    border-radius: 5px;
+    /* border-color: #334257; */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.377);
+    align-items: center;
+    overflow: auto;
+    /* background-color: #FFEACA; */
+}
+.decContaner::-webkit-scrollbar {
+    width: 5px;
+    height: 0;
+    
+  }
+  .decContaner::-webkit-scrollbar-thumb {
+    background: rgb(2, 2, 2); 
+    border-radius: 10px;
+    
+  }
+  .decContaner::-webkit-scrollbar-track {
+    background: white; 
+    border-radius: 10px;
+    
+  }
+  /* .decContaner::-webkit-scrollbar{
+      width: 5px;
+  } */
+
+#closeBtn1{
+    color: tomato;
+}
+table{
+    width: 100%;
 }
 
-th{
-    text-align: center;
-    margin-top: 10%;
-}
-td{
-    margin-top: 10%;    
-    text-align: center;
-}
-thead td{
-    margin-top: 10%;
-}
-#trEl{
-    margin-top: 15%;
-    text-align: center;
+/* tbody td{
+    position: relative;
+    top: 43%;    
+    text-align: left;
     
-}
+} */
+
+#cart thead tr th {
+    color: rgb(20, 18, 18);
+    /* border-bottom: 3px solid #062f4f; */
+    font-weight: bold;
+    /* border: solid tomato; */
+    padding: 0.5em;
+  }
+
+  #cart tbody tr td {
+      /* border: solid tomato; */
+      align-items: center;
+      padding: 0.5em;
+  }
+  td{
+      text-align: center;
+  }
 
 /* work popUP Form */
+form{width:340px;
+    height:440px;
+    background:#e6e6e6;
+    border-radius:8px;
+    box-shadow:0 0 40px -10px #000;
+    margin:calc(50vh - 220px) auto;
+    padding:20px 30px;
+    max-width:calc(100vw - 40px);
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+    position:relative}
+    /* hr */
+    #comaHr{
+        width: 85%;
+        margin-top: 17rem;
+    }
+
+    /* hr */
 
 .openButton{
-    margin-left: 43%;
-    margin-top: 7%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin:0 auto;
     background-color: violet;
          color: black;
       font-weight: bolder;
@@ -59,7 +177,14 @@ thead td{
       text-decoration: none;
       transform: 0.4s;
   }
-  
+  #btnCont{
+      width: 100%;
+      height: fit-content;
+      /* border: 2px solid tomato; */
+      margin: 2rem;
+      position: relative;
+  }
+  /* stop here with emam */
   .button:hover{
     background-color: blueviolet;
     color: burlywood;
@@ -75,99 +200,75 @@ thead td{
       left: 0;
       justify-content: center;
       align-items: center;
-      text-align: center;
+      text-align: left;
       display: none;
       z-index: 1;
+      margin-top: -13px;
       backdrop-filter: blur(6px);
+      
           }
   /* label input{
     
   } */
   #payForm{
     height: 280px;
-    width: 580px;
-    background-color: cornsilk;
-    margin-top: 15%;
-    border-radius: 5px;
+    width: fit-content;
+    background-color: white;
+        border-radius: 5px;
     position: relative;
     display: inline-block;
-    border-radius: 18px #548CA8;
+    border-radius: 5px;
+    margin-top: 5px;
       /* border-color: ; */
       box-shadow: 0px 1px 0px #274f66 #FFA45B;
-  
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
   }
-  fieldset{
+  /* fieldset{
   
     margin-top: 33px;
-    margin-left: 30px;
+    margin-left: 30px; */
     /* padding-top: 20%; */
-  }
-  .closeBtn{
+  /* } */
+  #closeBtn1{
     /* background-color: darkcyan; */
     position:absolute;
       top:-15px;
       right: -15px;
   }
   
-  
+  .divChe{
+      display: flex;
+      flex-direction: column;
+      /* border: solid tomato; */
+  }
   
   /* card drop down */
   
-  .dropbtn {
-    background-color: #5C8D89;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 11px;
-    height: 47px;
-  }
-  img{
-  width:30px;
-  height:20px
-  }
+  
+ 
   /* button form css */
-  .cardButt{
   
-    margin-top: 8%;
-  
-  }
-  #gog {
-  
-      background-color:tomato;
-      border-radius:2px;
-      border:2px solid #c94b4b;
-      display:inline-block;
-      color:#ffffff;
-      font-family:Arial;
-      font-size:17px;
-      padding:17px 40px;
-      text-decoration:none;
-      text-shadow:0px 1px 0px #da1616;
-  }
-  #fac{
-      background-color:#241ba3;
-      border-radius:2px;
-      border:2px solid #444d80;
-      display:inline-block;
-      color:#ffffff;
-      font-family:Arial;
-      font-size:17px;
-      padding:17px 40px;
-      text-decoration:none;
-      text-shadow:0px 1px 0px #274f66;
-  
-  
-  }
+  /* button style */
+  /* main #ShirtPage{
+      
+    background-color:whitesmoke;
+    border-radius:6px;
+    border:2px solid #f5704f;
+    display:inline-block;
+    color:#14315e;
+    font-family:Arial;
+    font-size:17px;
+    padding:17px 40px;
+    text-shadow:4px #da1616;
+  } */
   
   #btnFin{
     background-color:black;
-      border-radius:2px;
-      border:2px solid #413f3f;
+    border-style: none;
+      border-radius:5px;
       display:inline-block;
       color:#ffffff;
-      font-family:Arial;
       font-size:17px;
       padding:17px 40px;
     height: 51px;
@@ -176,37 +277,72 @@ thead td{
       text-shadow:0px 1px 0px #ebe7e7;
   }
   
-  /* button form css */
-  
-  .dropdown {
+  /* nav */
+  footer {
+    width: 100%;
+    height: 400px;
+    background-color: #CDF0EA;
+    background-size: cover;
+    text-align: center;
     position: relative;
-    display: inline-block;
+    margin-top: 5rem;
+    text-align: center;
+    /* color: white; */
+    font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.3pc;
   }
-  
-  .dropdown-content {
-    display: none;
+  #logo-foot {
     position: absolute;
-    background-color: #476072;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    width:fit-content;
+    display: inline-block;
+    font-family: 'Dela Gothic One', cursive;
+    color: rgba(182, 20, 33, 0.87);
+    font-size: 3pc;
+    font-weight: bold;
+    border: solid rgba(182, 20, 33, 0.87);
+    border-width: 15px;
+    padding: 0.5rem;
+   top: 2rem;
+   left: 20rem;
+    /* text-align: center; */
+    user-select: none;
   }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+  #first-set {
+  position: absolute;
+  top: 2rem;
+   right:20rem;
+   text-align: left;
+  }
+  #secound-set {
+    position: absolute;
+    top: 2rem;
+     right:50rem;
+     text-align: left;
+  }
+  li a {
+    /* text-decoration: black; */
     text-decoration: none;
-    display: block;
-    align-items: center;
+    color: black;
+    transition: 0.2s;
   }
-  
-  .dropdown-content a:hover {background-color: #EEEEEE}
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
+  li a:hover {
+    border-bottom: 4px solid rgba(182, 20, 33, 0.87);
   }
-  
-  .dropdown:hover .dropbtn {
-    background-color: #334257;
+  footer #rights {
+    position: absolute;
+    bottom: 0.5rem;
+     /* left:0rem; */
+     right: 32rem;
+     background-color:#CDF0EA ;
+     height: 30px;
   }
+  .idk {
+  font-size: 1pc;
+  font-family: 'Dela Gothic One', cursive;
+  }
+ 
+
+
+  /* nav end */
+
+ 
