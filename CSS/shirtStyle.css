@@ -140,13 +140,14 @@ float: right;
 
 #changeColor {
   width: 300px;
-  height: 65px;
+  height: fit-content;
   position: absolute;
-  top: 9rem;
+  top: 12rem;
   right: 2rem;
   /* border: solid tomato; */
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.349);
   border-radius: 5px;
+  padding: 0.5rem;
 }
 
 #changeColor .circle {
@@ -174,6 +175,7 @@ top: 4rem;
 width: 300px;
 box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.349);
 border-radius: 5px;
+padding: 0.5rem;
 }
 
 .circleGirl {
@@ -276,7 +278,10 @@ transition: 0.2s;
 
 
 
+.popUp {
 
+  display: none;
+}
 
 
 footer {
@@ -348,7 +353,7 @@ footer #rights {
   position: absolute;
   bottom: 0.5rem;
    /* left:0rem; */
-   right: 28rem;
+   right: 32rem;
    background-color:#CDF0EA ;
    height: 30px;
 }

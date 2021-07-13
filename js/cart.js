@@ -15,7 +15,7 @@ function loadCart() {
 }
 
   //   console.log(tshirt);
-};
+
 
 function renderCart() {
   loadCart();
