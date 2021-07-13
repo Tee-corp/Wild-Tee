@@ -14,6 +14,8 @@ function loadCart() {
   tshirt.design = tShirtItems;
 }
 
+//   console.log(tshirt);
+
 
 function renderCart() {
   loadCart();
@@ -110,7 +112,7 @@ let fontClose=document.getElementById('closeBtn1');
 fontClose.addEventListener('click', closeFormShow);
 function closeFormShow(){
   event.preventDefault();
-  document.querySelector(".popUpForm").style.display="none";
+  document.querySelector('.popUpForm').style.display='none';
 }
 
 buttonRes.addEventListener('click',deletTableRow);
@@ -119,7 +121,7 @@ function deletTableRow(event){
   let tableBody=document.getElementById('body');
   tableBody.innerHTML = '';
 
-  
+
 
 }
 
@@ -170,7 +172,7 @@ function carousel() {
 
 //   function unShow(event){
 //     event.preventDefault();
-    
+
 //   }
 
 
