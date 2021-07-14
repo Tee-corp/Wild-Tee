@@ -156,9 +156,7 @@ function deletTableRow(event) {
   let tShirtInCart = JSON.stringify([]);
   localStorage.setItem('t-shirtInCart', tShirtInCart);
   sumOfQuantity = 0;
-  console.log(typeof (numOfItemInCart));
   if (numOfItemInCart) {
-    console.log(typeof (numOfItemInCart));
     // if(typeof(numOfItemInCart) !== typeof('') ){
     numOfItemInCart[0] = [1];
     deleteFromCounter();

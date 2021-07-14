@@ -21,12 +21,13 @@ render();
 imgContainer.addEventListener("click", goToCstmPage);
 
 function goToCstmPage(event) {
-  console.log(event.target.id);
+  if (event.target.id !=='ob'){
   let imgIndex = event.target.id
   let clickedicon = JSON.stringify(imgFile[imgIndex]);
   localStorage.setItem("clickedicon", clickedicon);
 
   location.href = "shirt.html";
+  }
 }
 
 
