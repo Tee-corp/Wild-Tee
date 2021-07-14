@@ -30,6 +30,12 @@ html {
   margin: 0rem auto;
 }
 
+#ss {
+
+  border: solid #CDF0EA;
+  
+}
+
 #fixed-nav #logo-font {
   display: inline-block;
   font-family: 'Dela Gothic One', cursive;
