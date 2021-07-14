@@ -58,6 +58,7 @@ let  imgTsEl;
 changeColorContainer.addEventListener("click", changeColor);
 
 function changeColor (event){
+  if (event.target.id !=='changeColor' && event.target.id !==''){
   let ColorIndex = event.target.id ;
   imgContainerEl.textContent='';
   imgTsEl = document.createElement("img");
@@ -69,11 +70,12 @@ function changeColor (event){
 
   placeIcon();
 }
-
+}
 
 changeColorContainerGirl.addEventListener("click", changeColorGirl);
 
 function changeColorGirl (event){
+  if (event.target.id !=='changeColorGirl' && event.target.id !==''){
   let ColorIndex = event.target.id ;
   imgContainerEl.textContent='';
   imgTsEl = document.createElement("img");
@@ -85,14 +87,19 @@ function changeColorGirl (event){
 
   placeIcon();
 }
+}
 
 
 iconsContenierEl.addEventListener("click",  changIcon);
 function changIcon(event){
+  event.preventDefault();
+  if (event.target.id !=='icons'){
   let clickedicon= JSON.stringify(icons[event.target.id]);
   localStorage.setItem("clickedicon", clickedicon);
+ 
   newIcon.remove();
   placeIcon();
+  }
 }
 
 // *****************************************************************************************
