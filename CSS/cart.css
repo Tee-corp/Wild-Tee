@@ -161,10 +161,19 @@ height: 70px;
     color: rgb(20, 18, 18);
     /* border-bottom: 3px solid #062f4f; */
     /* font-weight: bold; */
-    /* border: solid tomato; */
+    
     padding: 0.5em;
     font-family: 'Dela Gothic One', cursive;
+   
   }
+
+th {
+  border: solid white;
+  /* margin-top: 1rem; */
+  border-width: 10px;
+
+}
+
 
   #cart tbody tr td {
       /* border: solid tomato; */
