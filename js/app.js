@@ -30,14 +30,13 @@ function goToCstmPage(event) {
   }
 }
 
+let imgIndex = 0;
+let clickedicon = JSON.stringify(imgFile[imgIndex]);
+localStorage.setItem("clickedicon", clickedicon);
 
 let btnEl = document.getElementById('btn');
 btnEl.addEventListener("click", gotoShirtPage);
-
 function gotoShirtPage() {
-  let imgIndex = 0;
-  let clickedicon = JSON.stringify(imgFile[imgIndex]);
-  localStorage.setItem("clickedicon", clickedicon);
   location.href = "shirt.html";
 
 }
@@ -47,15 +46,15 @@ let numOfItemInCart = JSON.parse(localStorage.getItem('numOfItemInCart')) || [];
 let cartNavEl = document.getElementById("ss");
 cartNavEl.textContent=`${numOfItemInCart}`;
 
-function addToCounter() {
+// function addToCounter() {
 
-  numOfItemInCart[0]++
+//   numOfItemInCart[0]++
 
-  let numOfItemInCartInLocal = JSON.stringify(numOfItemInCart);
-  localStorage.setItem('numOfItemInCart', numOfItemInCartInLocal);
+//   let numOfItemInCartInLocal = JSON.stringify(numOfItemInCart);
+//   localStorage.setItem('numOfItemInCart', numOfItemInCartInLocal);
 
-  cartNavEl.textContent=`${numOfItemInCart}`;
-}
+//   cartNavEl.textContent=`${numOfItemInCart}`;
+// }
 // *************************************************************************************************************
 
 const observer = new IntersectionObserver(entries => {
