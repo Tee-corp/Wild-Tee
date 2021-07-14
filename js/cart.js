@@ -57,29 +57,29 @@ function showCart() {
     img.setAttribute('height', '40px');
     tdEl4.appendChild(img);
     // *******************************************************************
-     let tdEl5 = document.createElement("td");
-     let img2 = document.createElement("img");
-     img2.setAttribute("src", "images/tshirt/"+tshirt.design[i].tsColor);
-     img2.setAttribute("width", "60px");
-     img2.setAttribute("height", "60px");
-     tdEl5.appendChild(img2);
-     trEl.appendChild(tdEl5);
-     // ********************************************************************
+    let tdEl5 = document.createElement("td");
+    let img2 = document.createElement("img");
+    img2.setAttribute("src", "images/tshirt/" + tshirt.design[i].tsColor);
+    img2.setAttribute("width", "60px");
+    img2.setAttribute("height", "60px");
+    tdEl5.appendChild(img2);
+    trEl.appendChild(tdEl5);
+    // ********************************************************************
     trEl.appendChild(tdEl4);
     let tdEl3 = document.createElement('td');
     tdEl3.textContent = `${tshirt.design[i].tsColor.split('.')[0]}`;
     trEl.appendChild(tdEl3);
     // *************************************************************************
     let tdEl6 = document.createElement("td");
-    
+
     tdEl6.innerHTML = `10 <i class="fas fa-dollar-sign"></i>`;
     trEl.appendChild(tdEl6);
     // *******************************************************************************
     tbodyEl.appendChild(trEl);
-    sumOfQuantity=sumOfQuantity+Number( tshirt.design[i].quantity);
+    sumOfQuantity = sumOfQuantity + Number(tshirt.design[i].quantity);
   }
-  let totalOfCartEl=document.getElementById('total');
-  totalOfCartEl.textContent=` Total price: ${sumOfQuantity*10}$`;
+  let totalOfCartEl = document.getElementById('total');
+  totalOfCartEl.textContent = ` Total price: ${sumOfQuantity * 10}$`;
 }
 
 
@@ -97,7 +97,7 @@ function removeItemFromCart(event) {
 
 function removeItem(event) {
   event.preventDefault();
-  tshirt.design.splice(Number(event.target.id),1);
+  tshirt.design.splice(Number(event.target.id), 1);
 }
 
 
@@ -111,26 +111,26 @@ renderCart();
 // ****************************************************************************************
 let numOfItemInCart = JSON.parse(localStorage.getItem('numOfItemInCart')) || [];
 let cartNavEl = document.getElementById("ss");
-cartNavEl.textContent=`${numOfItemInCart}`;
+cartNavEl.textContent = `${numOfItemInCart}`;
 
 function deleteFromCounter() {
 
   numOfItemInCart[0]--;
-if (numOfItemInCart==0){
-  numOfItemInCart='';
+  if (numOfItemInCart == 0) {
+    numOfItemInCart = '';
 
-}
+  }
   let numOfItemInCartInLocal = JSON.stringify(numOfItemInCart);
   localStorage.setItem('numOfItemInCart', numOfItemInCartInLocal);
 
-  cartNavEl.textContent=`${numOfItemInCart}`;
+  cartNavEl.textContent = `${numOfItemInCart}`;
 }
 
 
 // ******************************************************************************************
 // mone
 let openEl = document.getElementById('openBtn');
-let buttonRes=document.getElementById('btnFin');
+let buttonRes = document.getElementById('btnFin');
 // let formEl=document.getElementById('payForm');
 
 openEl.addEventListener('click', showPop);
@@ -142,22 +142,27 @@ function showPop(event) {
 
 }
 
-let fontClose=document.getElementById('closeBtn1');
+let fontClose = document.getElementById('closeBtn1');
 fontClose.addEventListener('click', closeFormShow);
-function closeFormShow(){
-  document.querySelector('.popUpForm').style.display='none';
+function closeFormShow() {
+  document.querySelector('.popUpForm').style.display = 'none';
 }
 
-buttonRes.addEventListener('click',deletTableRow);
+buttonRes.addEventListener('click', deletTableRow);
 
 function deletTableRow(event) {
   event.preventDefault();
- 
-  let  tShirtInCart = JSON.stringify([]);
+
+  let tShirtInCart = JSON.stringify([]);
   localStorage.setItem('t-shirtInCart', tShirtInCart);
   sumOfQuantity = 0;
-  numOfItemInCart[0]=1;
-  deleteFromCounter();
-  renderCart();
-  document.querySelector('.popUpForm').style.display='none';
+  console.log(typeof (numOfItemInCart));
+  if (numOfItemInCart) {
+    console.log(typeof (numOfItemInCart));
+    // if(typeof(numOfItemInCart) !== typeof('') ){
+    numOfItemInCart[0] = [1];
+    deleteFromCounter();
+    renderCart();
+  }
+  document.querySelector('.popUpForm').style.display = 'none';
 }
