@@ -145,149 +145,19 @@ function showPop(event) {
 let fontClose=document.getElementById('closeBtn1');
 fontClose.addEventListener('click', closeFormShow);
 function closeFormShow(){
-  event.preventDefault();
   document.querySelector('.popUpForm').style.display='none';
 }
 
 buttonRes.addEventListener('click',deletTableRow);
-function deletTableRow(event){
+
+function deletTableRow(event) {
   event.preventDefault();
-  let tableBody=document.getElementById('body');
-  tableBody.innerHTML = '';
-
-
-
+ 
+  let  tShirtInCart = JSON.stringify([]);
+  localStorage.setItem('t-shirtInCart', tShirtInCart);
+  sumOfQuantity = 0;
+  numOfItemInCart[0]=1;
+  deleteFromCounter();
+  renderCart();
+  document.querySelector('.popUpForm').style.display='none';
 }
-
-// move from page to another
-// let googleBut=document.getElementById('gog');
-// let faceboBut=document.getElementById('fac');
-// let TshirtBtn=document.getElementById('ShirtPage');
-
-// googleBut.addEventListener('click',goGoogl);
-// // faceboBut.addEventListener('click',goFace);
-// TshirtBtn.addEventListener('click',goTshirt);
-
-// function goGoogl(event){
-//   event.preventDefault();
-//   window.location.href='https://accounts.google.com/signin/v2/identifier?service=mail&lp=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin';
-// }
-
-// function goFace(event){
-//   event.preventDefault();
-//   window.location.href='https://web.facebook.com/?_rdc=1&_rdr';
-// }
-
-
-// function goTshirt(event){
-//   event.preventDefault();
-//   window.location.href='shirt.html';
-// }
-// ////////////////image conatiner////////////////////
-
-// let myIndex = 0;
-// carousel();
-
-// function carousel() {
-//   let i;
-//   let x = document.getElementsByClassName('mySlides');
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = 'none';
-//   }
-//   myIndex++;
-//   if (myIndex > x.length) {myIndex = 1;}
-//   x[myIndex-1].style.display = 'block';
-//   setTimeout(carousel, 1000);
-//   // Change image every 1 seconds
-
-// }
-// let closeForm=document.getElementById('closeBtn1')
-//   closeForm.addEventListener("click",unShow)
-
-//   function unShow(event){
-//     event.preventDefault();
-
-//   }
-
-
-// *****************************************************************************************************
-////////////////new form popup
-// ulEl=document.getElementById('test');
-// let details=[];
-
-// let orderRes=document.getElementById('payForm');
-// let divTrac1=document.getElementById('cardID');
-// let ulEl=document.getElementById('test');
-// function FinalCheck(name,type,check){
-//   this.customerName=name;
-//   this.paymentType=type;
-//   this.checkdeliver=check;
-//   details.push(this);
-
-// }
-// let checkbox = document.getElementById('checkFo');
-// let checkResu;
-// checkbox.addEventListener('change', checkedFun);
-// function checkedFun(e){
-//   checkResu=e.target.checked;
-//   console.log(checkResu);
-
-// }
-
-
-// function finalStep(event){
-
-//   event.preventDefault();
-//   console.log(event.target.formUser,'test');
-
-//   let name=event.target.formUser.value;
-
-//   console.log(name);
-//   let type=event.target.cardPay.value;
-//   // let check=event.target.checked;
-//   console.log(check,'test check');
-//   new FinalCheck(name,type,check);
-
-//   testValue();
-
-// }
-// function saveTestStorage(){
-//   let storage=JSON.stringify(FinalCheck.details);
-//   localStorage.setItem('result',storage);
-
-// }
-
-// function readStorage(){
-
-//   let objString=localStorage.getItem('result');
-//   let objNorm=JSON.parse(objString);
-//   if(objNorm !==null){
-//     FinalCheck.details=objNorm;
-//     testValue();
-
-//   }
-
-// }
-// readStorage();
-// let checkDelver;
-// function testValue(){
-
-//   for(let i=0;i<details.length;i++){
-
-//     let liElement=document.createElement('li');
-
-//     if(details.length[i].check){
-//       checkDelver='aramix';
-//     }
-//     else{
-//       checkDelver='Express';
-
-//     }
-//     liElement.textContent=`welcome our customer ${details.length[i].name} you went to pay using ${details.length[i].type} and recived product using ${checkDelver}`;
-//     ulEl.appendChild(liElement);
-//     orderRes.appendChild(ulEl);
-
-//   }
-//   saveTestStorage();
-// }
-// orderRes.addEventListener('submit',finalStep);
