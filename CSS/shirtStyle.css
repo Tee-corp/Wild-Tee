@@ -303,12 +303,16 @@ padding: 0.5rem;
 #proc {
   position: absolute;
   bottom: 2rem;
-   right: 6rem;
+   right: 4rem;
    text-decoration: none;
    font-size: 1.1pc;
    color: rgba(182, 20, 33, 0.87);
 font-weight: bold;
 transition: 0.2s;
+border: solid rgba(182, 20, 33, 0.87);
+border-width: 1px;
+border-radius: 5px;
+padding: 0.5rem;
 }
 
 
@@ -318,6 +322,18 @@ transition: 0.2s;
 
 }
 
+
+#ss {
+
+  border: solid #CDF0EA;
+  
+}
+
+#proc:active {
+
+  border-bottom: 0px solid rgba(182, 20, 33, 0.87);
+
+}
 
 
 .popUp {
