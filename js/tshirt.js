@@ -4,7 +4,7 @@ let changeColorContainer =document.getElementById('changeColor');
 let changeColorContainerGirl = document.getElementById('changeColorGirl');
 let iconsContenierEl=document.getElementById("icons")
 
-let icons=['cat.png', 'pizza-slices.png', 'money-bag.png','accident.png',"dolphin.png",'ostrich.png','penguin.png','cheetah.png','butterfly.png',"ballon.png", "bekind.png", "pizza.png", 'grunge.png', 'Etcher.png',  'a123 .png','hamster.png','bird.png','mushroom.png','Red-Mushroom.png','jordan.png','palestine.png','syria.png','sun.png','dahlia.png','sunflower.png','motorcycle.png',"nope.png",'sword.png',"wounded.png","wreath.png"];
+let icons=['cat.png', 'pizza-slices.png','batman.png','Bee.png','believe-in-you.png','bird2.png','blah-blah-blah.png','brain.png','Cob.png','creativity.png','Destroyed.png','Earth.png','Planets.png','Sun-Umbrella.png','superman.png','Flower.png','Flower-circle.png','Ladybug.png','light-bulb.png','Meteorite.png',"no-way.png" ,'money-bag.png','accident.png',"dolphin.png",'ostrich.png','penguin.png','cheetah.png','butterfly.png',"ballon.png", "bekind.png", "pizza.png", 'grunge.png', 'Etcher.png',  'a123 .png','hamster.png','bird.png','mushroom.png','Red-Mushroom.png','jordan.png','palestine.png','syria.png','sun.png','dahlia.png','sunflower.png','motorcycle.png',"nope.png",'sword.png',"wounded.png","wreath.png",'bunny.png','pikachu.png','splash.png','surprised.png'];
 
 let  iconImg;
 let  newIcon;
