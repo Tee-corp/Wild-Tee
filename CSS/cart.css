@@ -374,7 +374,7 @@ label {
     position: relative;
     margin-top: 5rem;
     text-align: center;
-    width: 75%;
+    width: 80%;
     height: 400px;
   margin: 0 auto;
   }
@@ -391,7 +391,7 @@ label {
     border-width: 15px;
     padding: 0.5rem;
    top: 2rem;
-   left: 2rem;
+   left: 0rem;
     /* text-align: center; */
     user-select: none;
   }
