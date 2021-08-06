@@ -246,7 +246,7 @@ padding: 0rem;
 .model1 {
 background-image: url(../images/model3.webp);
 background-size: cover;
-
+background-position-x: center;
 width: 40%;
 /* height:800px; */
 transition: 0.5s;
@@ -268,6 +268,8 @@ box-shadow: 0px 0px 0px #CDF0EA;
 .model2 {
   background-image: url(../images/model2front.webp);
   background-size: cover;
+  background-position-x: center;
+
   width: 40%;
   transition: 0.5s;
   box-shadow: 0px 0px 0px rgba(182, 20, 33, 0.87);
@@ -471,16 +473,26 @@ footer {
   width: 100%;
   height: 400px;
   background-color: #CDF0EA;
-  background-size: cover;
-  text-align: center;
-  position: relative;
-  margin-top: 5rem;
-  text-align: center;
+  /* background-size: cover; */
+ 
   /* color: white; */
   font-family: 'Montserrat', sans-serif;
 font-weight: bold;
 font-size: 1.3pc;
 }
+
+#footer-had {
+  /* border: solid tomato; */
+  
+  text-align: center;
+  position: relative;
+  margin-top: 5rem;
+  text-align: center;
+  width: 75%;
+  height: 400px;
+margin: 0 auto;
+}
+
 
 #logo-foot {
   position: absolute;
@@ -493,7 +505,7 @@ font-size: 1.3pc;
   border-width: 15px;
   padding: 0.5rem;
  top: 2rem;
- left: 20rem;
+ left: 2rem;
   /* text-align: center; */
   user-select: none;
 }
@@ -503,7 +515,7 @@ font-size: 1.3pc;
 #first-set {
 position: absolute;
 top: 2rem;
- right:20rem;
+ right:5rem;
  text-align: left;
  
 }
@@ -512,7 +524,7 @@ top: 2rem;
 
   position: absolute;
   top: 2rem;
-   right:50rem;
+   right: 30rem;
    text-align: left;
 
 }
@@ -536,7 +548,7 @@ footer #rights {
   position: absolute;
   bottom: 0.5rem;
    /* left:0rem; */
-   right: 32rem;
+   right: 12.5rem;
    background-color:#CDF0EA ;
    height: 30px;
 }
@@ -587,4 +599,64 @@ video {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
+}
+
+
+
+
+
+.loader {
+  position:absolute;
+  
+  height: 1000px;
+  width: 100%;
+  z-index: 999;
+  
+  visibility: hidden;
+  animation: fade  3s;
+  background-color: white ;
+}
+
+.one {
+
+  
+  border-radius: 50%;
+  background: rgba(182, 20, 33, 0.87);
+  opacity: 1;
+  animation: loading 2s infinite;
+  height: 150px;
+  width: 150px;
+  
+  margin: 20rem auto
+}
+
+
+
+
+@keyframes loading {
+  0% {
+    
+    box-shadow: 0 0 2px rgba(black, .1);
+    background: rgba(182, 20, 33, 0.87);
+  }
+  50% {
+   
+    box-shadow: 0 0 10px rgba(black, .1);
+    background: #CDF0EA;
+  }
+  100% {
+    
+    box-shadow: 0 0 2px rgba(black, .1);
+    rgba(182, 20, 33, 0.87)
+  }
+}
+
+@keyframes fade {
+  from {
+    visibility: hidden;
+  }
+
+  to {
+    visibility:visible;
+  }
 }
